@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Toad Town Services</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; 
+        }
+        
+        nav {
+            background-color: #2c5530;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .about-header {
+            text-align: center;
+            background-color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 { 
+            color: #2c5530; 
+            margin-bottom: 20px;
+        }
+        
+        .about-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+        
+        .about-content h2 {
+            color: #2c5530;
+            border-bottom: 2px solid #e8f5e8;
+            padding-bottom: 10px;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .contact-info { 
+            background-color: #e8f5e8; 
+            padding: 30px; 
+            margin: 30px 0; 
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 15px;
+        }
+
+        .reveal-checkbox-container {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .reveal-checkbox-container label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .reveal-checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #2c5530;
+        }
+
+        .contact-details.visible {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 15px; font-size: 16px; }
+            .about-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="about-header">
+            <h1>About Toad Town Services</h1>
+            <p>Your local handyman and tech support specialist</p>
+        </div>
+        
+        <div class="about-content">
+            <h2>Who We Are</h2>
+            <p>Toad Town Services is your trusted local partner for home repairs and technology support in Oneida County, Wisconsin. We understand that your home and technology should work for you, not against you.</p>
+            
+            <h2>Our Story</h2>
+            <p>Born and raised in the Northwoods, I've always been the person friends and neighbors call when something needs fixing. Whether it's a squeaky door, a computer that won't start, or helping someone set up their new smartphone, I genuinely enjoy solving problems and helping people.</p>
+            
+            <p>After years of helping friends and family, I decided to turn my passion into a business to serve our entire community. I believe in honest work, fair prices, and taking the time to explain what I'm doing so you understand your home and technology better.</p>
+            
+            <h2>Why Choose Us</h2>
+            <p><strong>Local Knowledge:</strong> We know the unique challenges of living in northern Wisconsin - from older homes that need special care to helping folks stay connected with technology.</p>
+            
+            <p><strong>Patient Approach:</strong> Especially with technology support, we take the time to teach, not just fix. We want you to feel confident using your devices.</p>
+            
+            <p><strong>Honest Pricing:</strong> No hidden fees, no inflated charges. We provide clear estimates and explain all costs upfront.</p>
+            
+            <p><strong>Reliable Service:</strong> When we say we'll be there, we show up. Your time is valuable, and we respect that.</p>
+            
+            <h2>Our Promise</h2>
+            <p>Every job we take on - whether it's fixing a leaky faucet or helping you video call your grandchildren - gets our full attention. We're not happy until you're happy, and we stand behind all our work.</p>
+            
+            <p>We're proud to be part of the Oneida County community and look forward to helping you with whatever challenges come up around your home or with your technology.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h2>Ready to Work Together?</h2>
+            <p>Call or text anytime for a free estimate!</p>
+            <p><strong>Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
+
+            <div class="reveal-checkbox-container">
+                <label>
+                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                    <span>Check here to reveal contact information</span>
+                </label>
+                <div class="contact-details" id="contactDetails">
+                    <div class="phone" id="phoneDisplay"></div>
+                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obfuscated contact information (base64 encoded to prevent basic scraping)
+        const encodedPhone = 'NzE1LTU3NS0xODQ0';
+        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+
+        function toggleContact() {
+            const checkbox = document.getElementById('revealContact');
+            const details = document.getElementById('contactDetails');
+
+            if (checkbox.checked) {
+                // Decode and display contact information
+                const phone = atob(encodedPhone);
+                const email = atob(encodedEmail);
+
+                document.getElementById('phoneDisplay').textContent = phone;
+                document.getElementById('emailDisplay').textContent = email;
+
+                details.classList.add('visible');
+            } else {
+                details.classList.remove('visible');
+            }
+        }
+    </script>
+</body>
+</html>
