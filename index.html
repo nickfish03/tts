@@ -72,30 +72,29 @@
         .contact-details.visible {
             display: block;
         }
+        .dev-banner {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 14px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 5px 5px 0 0;
+        }
         @media (max-width: 600px) {
             .services { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <h1>🐸 Toad Town Services</h1>
-    
-    <div class="contact-info">
-        <p><strong>Serving Oneida County, Wisconsin</strong></p>
-        <p>Reliable • Affordable • Local</p>
+    <div class="dev-banner">⚠️ This website is currently in development ⚠️</div>
 
-        <div class="reveal-checkbox-container">
-            <label>
-                <input type="checkbox" id="revealContact" onchange="toggleContact()">
-                <span>Check here to reveal contact information</span>
-            </label>
-            <div class="contact-details" id="contactDetails">
-                <div class="phone" id="phoneDisplay"></div>
-                <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
-            </div>
-        </div>
-    </div>
-    
+    <h1>🐸 Toad Town Services</h1>
+
+    <p style="text-align: center;"><strong>Serving Oneida County, Wisconsin</strong><br>
+    Reliable • Affordable • Local</p>
+
     <div class="services">
         <div class="service-box">
             <h2>🔨 Home Repair Services</h2>
@@ -149,34 +148,20 @@
         const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
         function toggleContact() {
-            const checkbox1 = document.getElementById('revealContact');
-            const checkbox2 = document.getElementById('revealContact2');
-            const details1 = document.getElementById('contactDetails');
-            const details2 = document.getElementById('contactDetails2');
+            const checkbox = document.getElementById('revealContact2');
+            const details = document.getElementById('contactDetails2');
 
-            // Sync checkboxes
-            if (checkbox1 && checkbox2) {
-                checkbox1.checked = checkbox1.checked || checkbox2.checked;
-                checkbox2.checked = checkbox1.checked || checkbox2.checked;
-            }
-
-            const isChecked = checkbox1.checked || checkbox2.checked;
-
-            if (isChecked) {
+            if (checkbox.checked) {
                 // Decode and display contact information
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
-                document.getElementById('phoneDisplay').textContent = phone;
-                document.getElementById('emailDisplay').textContent = email;
                 document.getElementById('phoneDisplay2').textContent = phone;
                 document.getElementById('emailDisplay2').textContent = email;
 
-                details1.classList.add('visible');
-                details2.classList.add('visible');
+                details.classList.add('visible');
             } else {
-                details1.classList.remove('visible');
-                details2.classList.remove('visible');
+                details.classList.remove('visible');
             }
         }
     </script>
