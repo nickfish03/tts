@@ -5,42 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toad Town Services - Home Repair & Computer Support in Oneida County, WI</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            padding: 20px; 
-            background-color: #f9f9f9; 
-            max-width: 800px; 
-            margin: 0 auto; 
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        h1 { 
-            text-align: center; 
-            color: #2c5530; 
-            border-bottom: 3px solid #2c5530; 
-            padding-bottom: 10px; 
+        h1 {
+            text-align: center;
+            color: #2c5530;
+            border-bottom: 3px solid #2c5530;
+            padding-bottom: 10px;
         }
-        .contact-info { 
-            text-align: center; 
-            background-color: #e8f5e8; 
-            padding: 20px; 
-            margin: 20px 0; 
-            border-radius: 5px; 
+        .contact-info {
+            text-align: center;
+            background-color: #e8f5e8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
-        .phone { 
-            font-size: 24px; 
-            font-weight: bold; 
-            color: #2c5530; 
+        .phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5530;
         }
-        .services { 
-            display: flex; 
-            gap: 30px; 
-            margin: 30px 0; 
+        .services {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
         }
-        .service-box { 
-            flex: 1; 
-            padding: 20px; 
-            background-color: #f0f8f0; 
-            border-left: 4px solid #2c5530; 
-            border-radius: 5px; 
+        .service-box {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f8f0;
+            border-left: 4px solid #2c5530;
+            border-radius: 5px;
+        }
+        .reveal-checkbox-container {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .reveal-checkbox-container label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .reveal-checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #2c5530;
+        }
+        .contact-details.visible {
+            display: block;
         }
         @media (max-width: 600px) {
             .services { flex-direction: column; }
@@ -51,9 +81,19 @@
     <h1>🐸 Toad Town Services</h1>
     
     <div class="contact-info">
-        <div class="phone">(715) XXX-XXXX</div>
         <p><strong>Serving Oneida County, Wisconsin</strong></p>
         <p>Reliable • Affordable • Local</p>
+
+        <div class="reveal-checkbox-container">
+            <label>
+                <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                <span>Check here to reveal contact information</span>
+            </label>
+            <div class="contact-details" id="contactDetails">
+                <div class="phone" id="phoneDisplay"></div>
+                <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+            </div>
+        </div>
     </div>
     
     <div class="services">
@@ -88,9 +128,57 @@
     
     <div class="contact-info">
         <h2>Contact Us Today</h2>
-        <div class="phone">(715) XXX-XXXX</div>
         <p>Call or text anytime for a free estimate!</p>
         <p><strong>Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
+
+        <div class="reveal-checkbox-container">
+            <label>
+                <input type="checkbox" id="revealContact2" onchange="toggleContact()">
+                <span>Check here to reveal contact information</span>
+            </label>
+            <div class="contact-details" id="contactDetails2">
+                <div class="phone" id="phoneDisplay2"></div>
+                <p><strong>Email:</strong> <span id="emailDisplay2"></span></p>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Obfuscated contact information (base64 encoded to prevent basic scraping)
+        const encodedPhone = 'NzE1LTU3NS0xODQ0';
+        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+
+        function toggleContact() {
+            const checkbox1 = document.getElementById('revealContact');
+            const checkbox2 = document.getElementById('revealContact2');
+            const details1 = document.getElementById('contactDetails');
+            const details2 = document.getElementById('contactDetails2');
+
+            // Sync checkboxes
+            if (checkbox1 && checkbox2) {
+                checkbox1.checked = checkbox1.checked || checkbox2.checked;
+                checkbox2.checked = checkbox1.checked || checkbox2.checked;
+            }
+
+            const isChecked = checkbox1.checked || checkbox2.checked;
+
+            if (isChecked) {
+                // Decode and display contact information
+                const phone = atob(encodedPhone);
+                const email = atob(encodedEmail);
+
+                document.getElementById('phoneDisplay').textContent = phone;
+                document.getElementById('emailDisplay').textContent = email;
+                document.getElementById('phoneDisplay2').textContent = phone;
+                document.getElementById('emailDisplay2').textContent = email;
+
+                details1.classList.add('visible');
+                details2.classList.add('visible');
+            } else {
+                details1.classList.remove('visible');
+                details2.classList.remove('visible');
+            }
+        }
+    </script>
 </body>
 </html>
