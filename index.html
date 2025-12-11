@@ -31,9 +31,6 @@
             color: #2c5530;
         }
         .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
             margin: 30px 0;
         }
         .service-box {
@@ -41,9 +38,14 @@
             background-color: #f0f8f0;
             border-left: 4px solid #2c5530;
             border-radius: 5px;
+            margin-bottom: 20px;
         }
         .service-box h2 {
             margin-top: 0;
+        }
+        .service-box ul {
+            columns: 2;
+            column-gap: 30px;
         }
         .reveal-checkbox-container {
             background-color: #fff3cd;
@@ -103,6 +105,7 @@
         }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
+            .service-box ul { columns: 1; }
         }
     </style>
 </head>
@@ -121,22 +124,6 @@
     Reliable • Affordable • Local</p>
 
     <div class="services">
-        <div class="service-box">
-            <h2>🔨 Home Repair Services</h2>
-            <ul>
-                <li>Grab bars & safety rail installation</li>
-                <li>Door & window adjustments & repairs</li>
-                <li>Drywall patching & painting</li>
-                <li>Shelving & picture hanging</li>
-                <li>Furniture assembly & moving</li>
-                <li>Screen & storm window repair</li>
-                <li>Weatherstripping & draft prevention</li>
-                <li>Minor carpentry & trim work</li>
-                <li>Deck cleaning & maintenance</li>
-                <li>Light fixture replacement (existing fixtures only)</li>
-            </ul>
-        </div>
-
         <div class="service-box">
             <h2>💻 Computer & Phone Support</h2>
             <ul>
@@ -166,6 +153,22 @@
                 <li>Security camera setup & troubleshooting</li>
                 <li>Employee technology training</li>
                 <li>Remote work setup assistance</li>
+            </ul>
+        </div>
+
+        <div class="service-box">
+            <h2>🔨 Home Repair Services</h2>
+            <ul>
+                <li>Grab bars & safety rail installation</li>
+                <li>Door & window adjustments & repairs</li>
+                <li>Drywall patching & painting</li>
+                <li>Shelving & picture hanging</li>
+                <li>Furniture assembly & moving</li>
+                <li>Screen & storm window repair</li>
+                <li>Weatherstripping & draft prevention</li>
+                <li>Minor carpentry & trim work</li>
+                <li>Deck cleaning & maintenance</li>
+                <li>Light fixture replacement (existing fixtures only)</li>
             </ul>
         </div>
     </div>
