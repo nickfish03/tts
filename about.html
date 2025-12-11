@@ -77,13 +77,48 @@
             text-align: center;
         }
         
-        .phone { 
-            font-size: 24px; 
-            font-weight: bold; 
+        .phone {
+            font-size: 24px;
+            font-weight: bold;
             color: #2c5530;
             margin-bottom: 15px;
         }
-        
+
+        .reveal-checkbox-container {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .reveal-checkbox-container label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .reveal-checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #2c5530;
+        }
+
+        .contact-details.visible {
+            display: block;
+        }
+
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .about-content { padding: 20px; }
@@ -129,10 +164,44 @@
         
         <div class="contact-info">
             <h2>Ready to Work Together?</h2>
-            <div class="phone">(715) XXX-XXXX</div>
             <p>Call or text anytime for a free estimate!</p>
             <p><strong>Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
+
+            <div class="reveal-checkbox-container">
+                <label>
+                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                    <span>Check here to reveal contact information</span>
+                </label>
+                <div class="contact-details" id="contactDetails">
+                    <div class="phone" id="phoneDisplay"></div>
+                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Obfuscated contact information (base64 encoded to prevent basic scraping)
+        const encodedPhone = 'NzE1LTU3NS0xODQ0';
+        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+
+        function toggleContact() {
+            const checkbox = document.getElementById('revealContact');
+            const details = document.getElementById('contactDetails');
+
+            if (checkbox.checked) {
+                // Decode and display contact information
+                const phone = atob(encodedPhone);
+                const email = atob(encodedEmail);
+
+                document.getElementById('phoneDisplay').textContent = phone;
+                document.getElementById('emailDisplay').textContent = email;
+
+                details.classList.add('visible');
+            } else {
+                details.classList.remove('visible');
+            }
+        }
+    </script>
 </body>
 </html>

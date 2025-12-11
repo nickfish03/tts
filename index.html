@@ -82,13 +82,36 @@
             margin: -20px -20px 20px -20px;
             border-radius: 5px 5px 0 0;
         }
+        nav {
+            background-color: #2c5530;
+            padding: 15px 0;
+            text-align: center;
+            margin: -20px -20px 20px -20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             .services { flex-direction: column; }
+            nav a { margin: 0 15px; font-size: 16px; }
         }
     </style>
 </head>
 <body>
     <div class="dev-banner">⚠️ This website is currently in development ⚠️</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <h1>🐸 Toad Town Services</h1>
 
