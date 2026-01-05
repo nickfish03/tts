@@ -8,58 +8,61 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
+            color: #f5e6d3;
             max-width: 800px;
             margin: 0 auto;
+            min-height: 100vh;
         }
         h1 {
             text-align: center;
-            color: #5cb85c;
-            border-bottom: 3px solid #5cb85c;
+            color: #e8a87c;
+            border-bottom: 3px solid #d4734b;
             padding-bottom: 10px;
         }
         p {
-            color: #d0d0d0;
+            color: #e8d5c4;
         }
         .contact-info {
             text-align: center;
-            background-color: #2a2a2a;
+            background-color: rgba(73, 53, 41, 0.6);
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
-            border: 1px solid #3a3a3a;
+            border: 1px solid #8b4726;
+            backdrop-filter: blur(10px);
         }
         .contact-info h2 {
-            color: #5cb85c;
+            color: #e8a87c;
         }
         .phone {
             font-size: 24px;
             font-weight: bold;
-            color: #5cb85c;
+            color: #d4734b;
         }
         .services {
             margin: 30px 0;
         }
         .service-box {
             padding: 20px;
-            background-color: #2a2a2a;
-            border-left: 4px solid #5cb85c;
+            background-color: rgba(73, 53, 41, 0.6);
+            border-left: 4px solid #d4734b;
             border-radius: 5px;
             margin-bottom: 20px;
+            backdrop-filter: blur(10px);
         }
         .service-box h2 {
             margin-top: 0;
-            color: #5cb85c;
+            color: #e8a87c;
         }
         .service-box ul {
             columns: 2;
             column-gap: 30px;
-            color: #d0d0d0;
+            color: #e8d5c4;
         }
         .reveal-checkbox-container {
-            background-color: #3a3a3a;
-            border: 2px solid #5cb85c;
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #d4734b;
             padding: 15px;
             margin: 15px 0;
             border-radius: 5px;
@@ -72,25 +75,26 @@
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
-            color: #e0e0e0;
+            color: #f5e6d3;
         }
         .reveal-checkbox-container input[type="checkbox"] {
             width: 20px;
             height: 20px;
             cursor: pointer;
+            accent-color: #d4734b;
         }
         .contact-details {
             display: none;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 2px solid #5cb85c;
+            border-top: 2px solid #d4734b;
         }
         .contact-details.visible {
             display: block;
         }
         .dev-banner {
-            background-color: #d9534f;
-            color: white;
+            background-color: #b8503e;
+            color: #f5e6d3;
             text-align: center;
             padding: 12px;
             font-weight: bold;
@@ -99,13 +103,14 @@
             border-radius: 5px 5px 0 0;
         }
         nav {
-            background-color: #2c5530;
+            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
             padding: 15px 0;
             text-align: center;
             margin: -20px -20px 20px -20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         nav a {
-            color: white;
+            color: #f5e6d3;
             text-decoration: none;
             margin: 0 30px;
             font-size: 18px;
@@ -113,7 +118,7 @@
         }
         nav a:hover {
             text-decoration: underline;
-            color: #5cb85c;
+            color: #e8a87c;
         }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
