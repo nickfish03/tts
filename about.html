@@ -5,88 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Toad Town Services</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9; 
+            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
+            color: #faf3e8;
+            min-height: 100vh;
         }
-        
+
         nav {
-            background-color: #2c5530;
+            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
             padding: 15px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
-        
+
         nav a {
-            color: white;
+            color: #faf3e8;
             text-decoration: none;
             margin: 0 30px;
             font-size: 18px;
             font-weight: bold;
         }
-        
+
         nav a:hover {
             text-decoration: underline;
+            color: #5cb85c;
         }
-        
+
         .container {
-            max-width: 800px; 
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         .about-header {
             text-align: center;
-            background-color: white;
+            background-color: rgba(73, 53, 41, 0.6);
             padding: 40px 20px;
             border-radius: 10px;
             margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
         }
-        
-        h1 { 
-            color: #2c5530; 
+
+        h1 {
+            color: #5cb85c;
             margin-bottom: 20px;
         }
-        
+
         .about-content {
-            background-color: white;
+            background-color: rgba(73, 53, 41, 0.6);
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #5cb85c;
             line-height: 1.8;
+            backdrop-filter: blur(10px);
         }
-        
+
         .about-content h2 {
-            color: #2c5530;
-            border-bottom: 2px solid #e8f5e8;
+            color: #5cb85c;
+            border-bottom: 2px solid #5cb85c;
             padding-bottom: 10px;
         }
-        
+
         .about-content p {
             margin-bottom: 20px;
-            color: #444;
+            color: #f0e5d8;
         }
-        
-        .contact-info { 
-            background-color: #e8f5e8; 
-            padding: 30px; 
-            margin: 30px 0; 
+
+        .contact-info {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            margin: 30px 0;
             border-radius: 10px;
             text-align: center;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
         }
-        
+
+        .contact-info h2 {
+            color: #5cb85c;
+        }
+
         .phone {
             font-size: 24px;
             font-weight: bold;
-            color: #2c5530;
+            color: #5cb85c;
             margin-bottom: 15px;
         }
 
         .reveal-checkbox-container {
-            background-color: #fff3cd;
-            border: 2px solid #ffc107;
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #5cb85c;
             padding: 15px;
             margin: 15px auto;
             border-radius: 5px;
@@ -100,19 +112,21 @@
             cursor: pointer;
             font-size: 16px;
             font-weight: bold;
+            color: #faf3e8;
         }
 
         .reveal-checkbox-container input[type="checkbox"] {
             width: 20px;
             height: 20px;
             cursor: pointer;
+            accent-color: #5cb85c;
         }
 
         .contact-details {
             display: none;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 2px solid #2c5530;
+            border-top: 2px solid #5cb85c;
         }
 
         .contact-details.visible {
