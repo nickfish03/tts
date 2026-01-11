@@ -188,57 +188,72 @@
     </nav>
 
     <div class="container">
-<div class="contact-header">
-        <h1>Contact Toad Town Services</h1>
-        <p>Let us know how we can help you!</p>
-    </div>
-        <div class="form-group">
+        <div class="contact-header">
+            <h1>Contact Toad Town Services</h1>
+            <p>Let us know how we can help you!</p>
+        </div>
+
+        <div class="contact-form">
             <form action="https://formspree.io/f/xykkgakv" method="POST">
-  
-        <label>
-            Your name:
-            <input type="text" name="name" required>
-        </label>
-        
-        <label>
-            Your email:
-            <input type="email" name="email" required>
-        </label>
-        
-        <label>
-            Your phone (optional):
-            <input type="tel" name="phone">
-        </label>
-        
-        <label>
-            Your location:
-            <input type="text" name="location" placeholder="City or area in northern WI" required>
-        </label>
-        
-        <label>
-            Type of service needed:
-            <select name="service-type" required>
-            <option value="">-- Please select --</option>
-            <option value="IT/Tech Support">IT/Tech Support</option>
-            <option value="Handyman Work">Handyman Work</option>
-            <option value="Both">Both</option>
-            </select>
-        </label>
-        
-        <label>
-            Timeline/urgency:
-            <input type="text" name="timeline" placeholder="e.g., This week, no rush, ASAP">
-        </label>
-        
-        <label>
-            Please describe your project or issue:
-            <textarea name="message" rows="6" required></textarea>
-        </label>
-        <div class="submit-btn">
-        <button type="submit">Send Message</button>
+                <div class="form-group">
+                    <label>Your name:</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your email:</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Your phone (optional):</label>
+                    <input type="tel" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label>Your location:</label>
+                    <input type="text" name="location" placeholder="City or area in northern WI" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Type of service needed:</label>
+                    <select name="service-type" required>
+                        <option value="">-- Please select --</option>
+                        <option value="Computer Repair/Troubleshooting">Computer Repair/Troubleshooting</option>
+                        <option value="Virus/Malware Removal">Virus/Malware Removal</option>
+                        <option value="WiFi/Network Setup">WiFi/Network Setup</option>
+                        <option value="Smart Home Device Setup">Smart Home Device Setup</option>
+                        <option value="Printer Setup/Issues">Printer Setup/Issues</option>
+                        <option value="Software Installation/Updates">Software Installation/Updates</option>
+                        <option value="Data Backup/Recovery">Data Backup/Recovery</option>
+                        <option value="Email/Account Setup">Email/Account Setup</option>
+                        <option value="Smart TV/Streaming Setup">Smart TV/Streaming Setup</option>
+                        <option value="Computer Training/Tutoring">Computer Training/Tutoring</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Timeline/urgency:</label>
+                    <select name="timeline" required>
+                        <option value="">-- Please select --</option>
+                        <option value="ASAP - Emergency">ASAP - Emergency</option>
+                        <option value="This week">This week</option>
+                        <option value="Within 2 weeks">Within 2 weeks</option>
+                        <option value="Within a month">Within a month</option>
+                        <option value="No rush - flexible timeline">No rush - flexible timeline</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Please describe your project or issue:</label>
+                    <textarea name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
-        </form>
-        </div>
+
         <div class="contact-form">
             <h2>Contact Toad Town Services</h2>
             <p>The best way to reach us is by email. Typically with a response back within 24 hours.</p>
