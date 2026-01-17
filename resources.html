@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Toad Town Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
+            color: #faf3e8;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: #faf3e8;
+            text-decoration: none;
+            margin: 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #5cb85c;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resources-header {
+            text-align: center;
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #5cb85c;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #f0e5d8;
+        }
+
+        .intro-section {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #5cb85c;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            line-height: 1.8;
+        }
+
+        .category {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #5cb85c;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .category h2 {
+            color: #5cb85c;
+            border-bottom: 2px solid #5cb85c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tier {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #5cb85c;
+        }
+
+        .tier h3 {
+            color: #5cb85c;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .tier p {
+            color: #f0e5d8;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .note-section {
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #5cb85c;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .note-section h2 {
+            color: #5cb85c;
+            margin-top: 0;
+        }
+
+        .note-section p {
+            color: #f0e5d8;
+            margin-bottom: 15px;
+        }
+
+        .cta-section {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #5cb85c;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-section p {
+            color: #f0e5d8;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            nav a { margin: 0 15px; font-size: 16px; }
+            .category { padding: 20px; }
+            .tier { padding-left: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="resources-header">
+            <h1>Resources & Recommendations</h1>
+            <p class="subtitle">Our Technology Recommendations for Northern Wisconsin Homes</p>
+        </div>
+
+        <div class="intro-section">
+            <p>These are tools and services we actually use, recommend to clients, and believe offer real value. We've organized them by category in a "good, better, even better" format—because the best solution depends on your needs, budget, and how much control you want over your data.</p>
+        </div>
+
+        <div class="category">
+            <h2>Password Managers</h2>
+
+            <div class="tier">
+                <h3>Good: Built-in Options (Google, Apple, Microsoft)</h3>
+                <p>Free, you probably already have an account, works across your devices automatically. Great starting point if you're not managing passwords at all yet.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Bitwarden</h3>
+                <p>Fully functional free version with everything most people need. Premium is $10/year for extras like emergency access and advanced two-factor authentication. Open-source and trusted.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Proton Pass</h3>
+                <p>Integrated into the privacy-focused Proton ecosystem. If you're using Proton Mail or VPN, this creates a cohesive, secure environment. Includes email aliasing to protect your real address.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Web Browsers</h2>
+
+            <div class="tier">
+                <h3>Good: Microsoft Edge or Safari</h3>
+                <p>Pre-installed, regularly updated, good performance. Edge works well across Windows and mobile devices.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Firefox</h3>
+                <p>Independent, privacy-focused, highly customizable. Strong tracker blocking built-in. Good balance of privacy and compatibility.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Brave</h3>
+                <p>Privacy by default with aggressive ad/tracker blocking. Built-in options for supporting creators. Chromium-based so sites work reliably.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Email Services</h2>
+
+            <div class="tier">
+                <h3>Good: Gmail, Outlook, Apple Mail</h3>
+                <p>Free, reliable, huge storage, excellent spam filtering. You probably already have one. Good search and organization tools.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Proton Mail (Free Tier)</h3>
+                <p>End-to-end encrypted, Swiss privacy laws, ad-free. Free tier is genuinely useful for most personal email needs.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Proton Mail (Paid) or Fastmail</h3>
+                <p>Proton Mail paid plans add custom domains, more storage, and advanced features. Fastmail offers excellent email with great calendar/contact integration and customer support—no encryption by default but solid privacy practices.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Cloud Storage & Backup</h2>
+
+            <div class="tier">
+                <h3>Good: Google Drive, OneDrive, iCloud</h3>
+                <p>Comes with your existing account, seamless integration with your devices. OneDrive is included with Microsoft 365 subscriptions. Automatic photo backup on mobile.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Proton Drive</h3>
+                <p>End-to-end encrypted storage with Swiss privacy. Free tier gives you a start; paid plans expand storage and integrate with other Proton services.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Combination Approach</h3>
+                <p>Use Proton Drive or similar for sensitive documents, plus a local backup solution (external hard drive with regular backups) for full control. For critical data: 3-2-1 rule (3 copies, 2 different media types, 1 offsite).</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Photo Storage & Management</h2>
+
+            <div class="tier">
+                <h3>Good: Google Photos, iCloud Photos, Amazon Photos</h3>
+                <p>Automatic backup from your phone, easy sharing, decent search. Google Photos free tier is compressed quality; iCloud and Amazon (with Prime) offer full quality within limits.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Combination of Cloud + Local</h3>
+                <p>Use Google/iCloud for convenience and access, but also maintain a local copy on an external hard drive. Photos are too important to trust to just one system.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Self-Hosted or Privacy-Focused + Local</h3>
+                <p>Proton Drive for privacy-focused cloud storage, or services like Synology Photos for full control with your own NAS. Always maintain local backups on external drives you control.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Two-Factor Authentication (2FA)</h2>
+
+            <div class="tier">
+                <h3>Good: SMS Text Codes</h3>
+                <p>Better than nothing, widely supported. Vulnerable to SIM swapping but still adds significant security for most people.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Authenticator Apps (Microsoft, Google, Authy)</h3>
+                <p>Free, more secure than SMS, works offline. Microsoft and Google authenticators sync across devices with your account.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Hardware Keys (YubiKey, Titan)</h3>
+                <p>Physical security keys offer the strongest protection against phishing and account takeover. One-time purchase, works across many services. Best combined with authenticator app as backup.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Home Network Equipment</h2>
+
+            <div class="tier">
+                <h3>Good: ISP-Provided Router/Modem Combo</h3>
+                <p>Free or rental fee, gets you online, basic functionality. Fine for simple setups and non-technical users.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Your Own Router + ISP Modem</h3>
+                <p>Purchase your own router (TP-Link, ASUS, Netgear) for better performance, control, and features. Eliminates rental fees over time. Keep ISP modem or buy your own if supported.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Mesh System or Prosumer Setup</h3>
+                <p>For larger homes: mesh systems (Eero, Google WiFi, UniFi) provide seamless coverage. For more control: systems like Ubiquiti UniFi offer professional features at reasonable prices. Great for smart homes, streaming, or multiple users.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Video Calling</h2>
+
+            <div class="tier">
+                <h3>Good: FaceTime, Google Meet, Microsoft Teams</h3>
+                <p>Free, built into devices you already have, simple to use. FaceTime works great for Apple-to-Apple. Meet and Teams work across platforms.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Zoom (Free Tier)</h3>
+                <p>40-minute limit on group calls but excellent quality and reliability. Most people are familiar with it. Works on everything.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Jitsi Meet</h3>
+                <p>Open-source, no account required, privacy-focused. Host your own or use their free service. Great for those who want control and privacy without big-tech data collection.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Ad Blocking & Privacy</h2>
+
+            <div class="tier">
+                <h3>Good: Browser Built-In Settings</h3>
+                <p>Enable tracking protection in Firefox, Edge, Safari, or Brave. Free, easy, immediate improvement.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: uBlock Origin (Browser Extension)</h3>
+                <p>Free, open-source, highly effective ad and tracker blocker. Works in Firefox, Chrome, Edge. Regularly updated.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Pi-hole (Network-Level)</h3>
+                <p>Raspberry Pi-based DNS blocker that works for your entire home network. Blocks ads and trackers for all devices including smart TVs and phones. Requires some technical setup but very effective.</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Notes & Organization</h2>
+
+            <div class="tier">
+                <h3>Good: Apple Notes, Google Keep, Microsoft OneNote</h3>
+                <p>Free, syncs automatically, simple and reliable. Good for quick notes and basic organization.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Better: Notion or Obsidian</h3>
+                <p>Notion is great for structured information and collaboration. Obsidian excels at linked notes and works with plain markdown files you control.</p>
+            </div>
+
+            <div class="tier">
+                <h3>Even Better: Combination Approach</h3>
+                <p>Quick capture in Keep/Apple Notes, deep work and organization in Notion/Obsidian. Use what fits the task. For maximum privacy: Obsidian with local files only, or Joplin with your own sync.</p>
+            </div>
+        </div>
+
+        <div class="note-section">
+            <h2>A Note on Privacy vs. Convenience</h2>
+            <p>The "even better" options often prioritize privacy and control, which sometimes means trading some convenience. The best choice is the one you'll actually use consistently. Start with "good," upgrade to "better" when you're ready, and move to "even better" if privacy and control matter for your specific needs.</p>
+        </div>
+
+        <div class="cta-section">
+            <p><strong>Need help choosing or setting up any of these?</strong> That's exactly what we're here for. We can walk you through options, help with setup, and make sure everything works together smoothly.</p>
+        </div>
+    </div>
+</body>
+</html>
