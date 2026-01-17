@@ -142,7 +142,9 @@ permalink: /worklog/index.html
         <div class="gallery">
             {% for entry in worklog.entries | reverse %}
             <div class="entry">
+            <a href="{{ entry.image }}" target="_blank">
                 <img src="{{ entry.image }}" alt="{{ entry.caption }}" loading="lazy">
+            </a>
                 <div class="entry-content">
                     <div class="entry-date">{{ entry.date }}</div>
                     <div class="entry-caption">{{ entry.caption }}</div>
