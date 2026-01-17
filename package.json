@@ -1,0 +1,16 @@
+{
+  "name": "toad-town-services",
+  "version": "1.0.0",
+  "description": "Toad Town Services website with work log",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
