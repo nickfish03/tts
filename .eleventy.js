@@ -1,7 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Copy existing HTML files as-is to _site
-  eleventyConfig.addPassthroughCopy("index.html");
-  eleventyConfig.addPassthroughCopy("about.html");
+eleventyConfig.addPassthroughCopy("about.html");
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("resources.html");
 

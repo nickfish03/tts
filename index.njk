@@ -1,3 +1,6 @@
+---
+permalink: /index.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,6 +123,34 @@
             text-decoration: underline;
             color: #5cb85c;
         }
+        .recent-work {
+            text-align: center;
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
+        }
+        .recent-work h2 {
+            color: #5cb85c;
+            margin-top: 0;
+        }
+        .recent-work img {
+            max-width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .recent-work .date {
+            color: #5cb85c;
+            font-size: 14px;
+        }
+        .recent-work a {
+            color: #5cb85c;
+            font-weight: bold;
+        }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .service-box ul { columns: 1; }
@@ -190,6 +221,20 @@
             </ul>
         </div>
     </div>
+
+    {% set latest = worklog.entries | last %}
+    {% if latest %}
+    <div class="recent-work">
+        <h2>Recent Work</h2>
+        <a href="{{ latest.image }}" target="_blank">
+            <img src="{{ latest.image }}" alt="{{ latest.caption }}">
+        </a>
+        <p class="date">{{ latest.date }}</p>
+        <p>{{ latest.caption }}</p>
+        <p><a href="worklog/">See more of our work &rarr;</a></p>
+        <p style="font-size: 13px; color: #c4a882; margin-top: 15px;"><em>Note: Our work log includes personal renovation projects. We are not currently accepting handyman or general labor jobs &mdash; only tech, IT, and audio services at this time.</em></p>
+    </div>
+    {% endif %}
 
     <div class="contact-info">
         <h2>Contact Us Today</h2>
