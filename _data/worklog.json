@@ -1,11 +1,6 @@
 {
   "entries": [
     {
-      "date": "2026-02-03",
-      "image": "/images/worklog/two stage water filter.jpg",
-      "caption": "Completed two-stage whole-house water filtration system."
-    },
-    {
       "date": "2026-01-04",
       "image": "/images/worklog/projector.jpg",
       "caption": "Hooking up and calibrating a projector."
@@ -29,6 +24,11 @@
       "date": "2026-02-02",
       "image": "/images/worklog/water filtration diagram.jpg",
       "caption": "Prepping for installation of two-stage water filtration system to filter out PFAS."
+    },
+    {
+      "date": "2026-02-03",
+      "image": "/images/worklog/two stage water filter.jpg",
+      "caption": "Completed two-stage whole-house water filtration system."
     }
   ]
 }
