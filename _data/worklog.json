@@ -38,7 +38,12 @@
     {
       "date": "2026-02-15",
       "image": "/images/worklog/white walls.jpg",
-      "caption": "Walls are getting close to finished."
+      "caption": "Walls are getting close to be ready for paint."
+    },
+    {
+      "date": "2026-02-17",
+      "image": "/images/worklog/Synology NAS.jpg",
+      "caption": "Finishing set up of a Synology NAS (Network Attached Storage) for media storage and backup."
     }
   ]
 }
