@@ -39,6 +39,11 @@
       "date": "2026-02-15",
       "image": "/images/worklog/white walls.jpg",
       "caption": "Walls are getting close to finished."
+    },
+    {
+      "date": "2026-02-20",
+      "image": "/images/worklog/wxpr catalog.png",
+      "caption": "A little side project building a new music library/catalog for WXPR radio."
     }
   ]
 }
