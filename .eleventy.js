@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
   // Copy existing HTML files as-is to _site
 eleventyConfig.addPassthroughCopy("about.html");
+  eleventyConfig.addPassthroughCopy("why-toad.html");
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("resources.html");
 

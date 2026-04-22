@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Toad Town Services</title>
+    <title>Why Toad? - Toad Town Services</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,7 +40,7 @@
             padding: 20px;
         }
 
-        .about-header {
+        .page-header {
             text-align: center;
             background-color: rgba(73, 53, 41, 0.6);
             padding: 40px 20px;
@@ -52,37 +52,61 @@
 
         h1 {
             color: #5cb85c;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        .about-content {
+        .page-header p {
+            color: #f0e5d8;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .story-section {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 40px;
             border-radius: 10px;
             border: 1px solid #5cb85c;
             line-height: 1.8;
             backdrop-filter: blur(10px);
+            margin-bottom: 25px;
         }
 
-        .about-content h2 {
+        .story-section h2 {
             color: #5cb85c;
             border-bottom: 2px solid #5cb85c;
             padding-bottom: 10px;
+            margin-top: 0;
         }
 
-        .about-content p {
+        .story-section p {
             margin-bottom: 20px;
             color: #f0e5d8;
         }
 
-        .about-content ul {
-            margin: 15px 0 25px 20px;
-            color: #f0e5d8;
-            line-height: 1.8;
+        .story-section p:last-child {
+            margin-bottom: 0;
         }
 
-        .about-content ul li {
-            margin-bottom: 8px;
+        .photo {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            border: 2px solid #5cb85c;
+            display: block;
+            margin: 25px auto 10px;
+        }
+
+        .photo-caption {
+            text-align: center;
+            color: #5cb85c;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
         }
 
         .contact-info {
@@ -143,14 +167,9 @@
             display: block;
         }
 
-        .logo {
-            width: 100px;
-            height: auto;
-        }
-
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
-            .about-content { padding: 20px; }
+            .story-section { padding: 20px; }
         }
     </style>
 </head>
@@ -165,42 +184,46 @@
     </nav>
 
     <div class="container">
-        <div class="about-header">
-            <h1>About Toad Town Services</h1>
-
-            <p><img class="logo"src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
-
-            <p>Your Northern Wisconsin Partner for Technology Solutions</p>
+        <div class="page-header">
+            <h1>Why Toad?</h1>
+            <p><img class="logo" src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
+            <p>The story behind the name.</p>
         </div>
 
-        <div class="about-content">
-            <h2>Who We Are</h2>
-            <p>Toad Town Services is a one-person technology services business serving Rhinelander and Oneida County, WI. I'm Nick, the owner and the person who shows up at your door.</p>
+        <div class="story-section">
+            <h2>The First Meeting</h2>
+            <p>The first time I met my wife (Julie), we were at a birthday party at a lake cabin. A few of us decided to see what amphibians were singing in the nearby water ditch, and had a good time.</p>
+        </div>
 
-            <h2>Background</h2>
-            <p>My career has taken a lot of turns, and most of them involved figuring out how things work and fixing them when they don't.</p>
+        <div class="story-section">
+            <h2>The First Toad</h2>
+            <p>Later that year, at college, I went over to the dorms of the same group of folks but stumbled upon a small American Toad. Since we didn't find one before, I picked it up and brought it with me and presented it to Julie. Apparently, a toad was a stronger impression on her than a bunch of flowers.</p>
+        </div>
+            
+        <div class="story-section">
+            <h2>The Green Bus</h2>
+            <p>A number of years later, we bought a school bus to convert into a RV, full of potential. When it came time to paint it, we decided on green, and thus named the bus the <em>Toad</em>.</p>
+            <img src="images/why-toad-bus.jpg" alt="Nick standing in front of Toad, the green school bus, in front of our Rhinelander property" class="photo">
+        </div>
 
-            <p>I spent two years as Director of Operations and Technology at WXPR Public Radio, where I managed broadcast equipment, migrated the station's network infrastructure, and held FCC Chief Operator responsibility. I'm a Society of Broadcast Engineers Certified Radio Operator and hold a broadcast engineering certificate from the Cleveland Institute of Electronics.</p>
+        <div class="story-section">
+            <h2>Toad Town</h2>
+            <p>Our property in Rhinelander had something the bus didn't: real toads. Toads are cute [to us] and they help with pest control so we provided them some nice habitat in the garden. A town of toads would be great for the garden!</p>
+        </div>
 
-            <p>Before and after that, I worked in IT and data analytics — building reporting systems for healthcare organizations, managing networks and compliance, deploying and supporting business technology. I've also done hands-on work across manufacturing, marine repair, broadband installation, and construction.</p>
+        <div class="story-section">
+            <h2>Toad Town Services</h2>
+            <p>When it came time to name the business, it wasn't much of a debate. Toad Town Services is a continuation of the same thread — something personal, a little unexpected, and easy to remember.</p>
+        </div>
 
-            <p>I have a BA in Music and Management Studies from St. Olaf College, where I spent four years as a recording engineer for the college's concert series.</p>
-
-            <h2>Why Toad Town Services</h2>
-
-            <p>There's no shortage of tech support options, but most are either big-box impersonal or narrowly specialized. I started Toad Town Services because I kept running into people — neighbors, community members, small organizations — who needed someone who could actually sit down with them, understand their situation, and solve the problem in front of them rather than hand it off or upsell them.</p>
-
-            <p>I currently volunteer with my church's audio and streaming setup, WXPR's music library and am working through my own home renovation projects. That's not filler — it means I'm actively working on the same kinds of problems my clients bring to me.</p>
-
-            <h2>What to Expect</h2>
-
-            <p>Clear communication about what I'm doing and what it will cost. No unnecessary upsells. If I don't know or can't help with something, I'll tell you that too.</p>
-
+        <div class="story-section">
+            <h2>An American Toad</h2>
+            <p><img src="images/toad_top.jpg" alt="An American Toad" class="photo"><img src ="images/toad_front.jpg" alt="An American Toad" class="photo"></p>
         </div>
 
         <div class="contact-info">
-            <h2>Ready to Discuss Your Project?</h2>
-            <p>Reach out anytime for a free consultation. We'll talk through what you need and figure out the best path forward together.</p>
+            <h2>Ready to Work Together?</h2>
+            <p>Reach out anytime — I'm happy to talk through what you need, no pressure.</p>
             <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
 
             <div class="reveal-checkbox-container">
@@ -217,7 +240,6 @@
     </div>
 
     <script>
-        // Obfuscated contact information (base64 encoded to prevent basic scraping)
         const encodedPhone = 'NzE1LTU3NS0xODQ0';
         const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
@@ -226,7 +248,6 @@
             const details = document.getElementById('contactDetails');
 
             if (checkbox.checked) {
-                // Decode and display contact information
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
