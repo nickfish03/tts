@@ -10,12 +10,16 @@ permalink: /index.html
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
             color: #faf3e8;
+            min-height: 100vh;
+        }
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            min-height: 100vh;
+            padding: 20px;
         }
         h1 {
             text-align: center;
@@ -95,21 +99,19 @@ permalink: /index.html
         .contact-details.visible {
             display: block;
         }
-        .dev-banner {
-            background-color: #b8503e;
-            color: #f5e6d3;
+        .page-header {
             text-align: center;
-            padding: 12px;
-            font-weight: bold;
-            font-size: 14px;
-            margin: -20px -20px 20px -20px;
-            border-radius: 5px 5px 0 0;
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 20px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
         }
         nav {
             background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
             padding: 15px 0;
             text-align: center;
-            margin: -20px -20px 20px -20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         nav a {
@@ -162,7 +164,7 @@ permalink: /index.html
     </style>
 </head>
 <body>
-    <div class="dev-banner">This website is in development and may change frequently.</div>
+
 
     <nav>
         <a href="index.html">Home</a>
@@ -173,10 +175,12 @@ permalink: /index.html
         <a href="contact.html">Contact</a>
     </nav>
 
-    <h1><img class="logo" src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"> Toad Town Services</h1>
-
-    <p style="text-align: center;"><strong>Serving Oneida County, Wisconsin</strong><br>
-    Reliable • Affordable • Local</p>
+    <div class="container">
+    <div class="page-header">
+        <h1><img class="logo" src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"> Toad Town Services</h1>
+        <p><strong>Serving Oneida County, Wisconsin</strong><br>
+        Reliable • Affordable • Local</p>
+    </div>
 
     <div class="services">
         <div class="service-box">
@@ -281,5 +285,9 @@ permalink: /index.html
             }
         }
     </script>
+    </div>
+    <footer style="background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%); color: #faf3e8; text-align: center; padding: 15px 0; margin-top: 40px; font-size: 14px;">
+        &copy; 2026 Toad Town Services LLC
+    </footer>
 </body>
 </html>
