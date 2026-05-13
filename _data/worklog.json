@@ -59,6 +59,11 @@
       "date": "2026-04-21",
       "image": "/images/worklog/phone_repair.jpg",
       "caption": "Emergency phone repair for a malfunctioning power button."
+    },
+    {
+      "date": "2026-05-13",
+      "image": "/images/worklog/audiaflex.jpg",
+      "caption": "Documenting current equipment before installing a new audio processor."
     }
   ]
 }
