@@ -4,6 +4,7 @@ eleventyConfig.addPassthroughCopy("about.html");
   eleventyConfig.addPassthroughCopy("why-toad.html");
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("resources.html");
+  eleventyConfig.addPassthroughCopy("rates.html");
 
   // Copy images directory for worklog photos
   eleventyConfig.addPassthroughCopy("images");
