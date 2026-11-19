@@ -1,0 +1,172 @@
+---
+permalink: /projects/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Toad Town Services</title>
+    <meta name="description" content="Examples of recent tech, IT, and church audio/video work by Toad Town Services in Rhinelander and northern Wisconsin.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
+            color: #faf3e8;
+            min-height: 100vh;
+        }
+        nav {
+            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        nav a {
+            color: #faf3e8;
+            text-decoration: none;
+            margin: 0 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #5cb85c;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .page-header {
+            text-align: center;
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #5cb85c;
+            border-bottom: 3px solid #5cb85c;
+            padding-bottom: 10px;
+        }
+        .page-header p { color: #f0e5d8; }
+        .logo { width: 75px; height: auto; }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .project-card {
+            background-color: rgba(73, 53, 41, 0.6);
+            border-left: 4px solid #5cb85c;
+            border-radius: 5px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .project-body { padding: 20px; }
+        .project-category {
+            color: #c4a882;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .project-card h2 {
+            color: #5cb85c;
+            margin: 5px 0 15px;
+            font-size: 21px;
+        }
+        .project-card h3 {
+            color: #faf3e8;
+            font-size: 15px;
+            margin: 12px 0 4px;
+        }
+        .project-card p {
+            color: #f0e5d8;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .project-card a { color: #5cb85c; font-weight: bold; }
+        .cta {
+            text-align: center;
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 20px;
+            margin: 30px 0 0;
+            border-radius: 5px;
+            border: 1px solid #5cb85c;
+        }
+        .cta a { color: #5cb85c; font-weight: bold; }
+        footer {
+            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
+            color: #faf3e8;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            nav a { margin: 0 15px; font-size: 16px; }
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/rates.html">Rates</a>
+        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1><img class="logo" src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"> Projects</h1>
+            <p>A few examples of the kinds of problems I help people solve.</p>
+        </div>
+
+        <div class="project-grid">
+            {% for project in projects.projects %}
+            <div class="project-card">
+                {% if project.image %}
+                <img src="{{ project.image }}" alt="{{ project.imageAlt }}" loading="lazy">
+                {% endif %}
+                <div class="project-body">
+                    <div class="project-category">{{ project.category }}</div>
+                    <h2>{{ project.title }}</h2>
+                    <h3>What they needed</h3>
+                    <p>{{ project.need }}</p>
+                    <h3>What I did</h3>
+                    <p>{{ project.did }}</p>
+                    <h3>The result</h3>
+                    <p>{{ project.result }}</p>
+                    {% if project.link %}
+                    <p style="margin-top: 12px;"><a href="{{ project.link }}" target="_blank" rel="noopener">{{ project.linkText }} &rarr;</a></p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="cta">
+            <p><strong>Have something similar going on?</strong> <a href="/contact.html">Get in touch</a> &mdash; I'm happy to talk it through, no pressure.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Toad Town Services LLC
+    </footer>
+</body>
+</html>

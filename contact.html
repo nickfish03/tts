@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Toad Town Services</title>
+    <meta name="description" content="Contact Toad Town Services for tech support, IT, and church audio/video help in Rhinelander and northern Wisconsin.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -101,6 +103,17 @@
             resize: vertical;
         }
 
+        .review-btn {
+            display: inline-block;
+            background-color: #5cb85c;
+            color: #2b1f1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+        }
+        .review-btn:hover { background-color: #6fd36f; }
+        .review-box { text-align: center; }
         .submit-btn {
             background: linear-gradient(135deg, #4a9d4a 0%, #5cb85c 100%);
             color: #faf3e8;
@@ -182,20 +195,19 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="why-toad.html">Why Toad?</a>
-        <a href="resources.html">Resources</a>
-        <a href="rates.html">Rates</a>
-        <a href="worklog/">Work Log</a>
-        <a href="https://video.toadtownservices.com" target="_blank">Videos</a>
-        <a href="contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/rates.html">Rates</a>
+        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
+        <a href="/contact.html">Contact</a>
     </nav>
 
     <div class="container">
         <div class="contact-header">
             <h1>Contact Toad Town Services</h1>
-            <p>Let us know how we can help you!</p>
+            <p>Let me know how I can help!</p>
         </div>
 
         <div class="contact-form">
@@ -217,24 +229,36 @@
 
                 <div class="form-group">
                     <label>Your location:</label>
-                    <input type="text" name="location" placeholder="City or area in northern WI" required>
+                    <input type="text" name="location" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
                 </div>
 
                 <div class="form-group">
                     <label>Type of service needed:</label>
                     <select name="service-type" required>
                         <option value="">-- Please select --</option>
-                        <option value="Computer Repair/Troubleshooting">Computer Repair/Troubleshooting</option>
-                        <option value="Virus/Malware Removal">Virus/Malware Removal</option>
-                        <option value="WiFi/Network Setup">WiFi/Network Setup</option>
-                        <option value="Smart Home Device Setup">Smart Home Device Setup</option>
-                        <option value="Printer Setup/Issues">Printer Setup/Issues</option>
-                        <option value="Software Installation/Updates">Software Installation/Updates</option>
-                        <option value="Data Backup/Recovery">Data Backup/Recovery</option>
-                        <option value="Email/Account Setup">Email/Account Setup</option>
-                        <option value="Smart TV/Streaming Setup">Smart TV/Streaming Setup</option>
-                        <option value="Computer Training/Tutoring">Computer Training/Tutoring</option>
-                        <option value="Other">Other</option>
+                        <optgroup label="Home">
+                            <option value="Computer Repair/Troubleshooting">Computer repair or troubleshooting</option>
+                            <option value="Virus/Malware Removal">Virus or malware removal</option>
+                            <option value="Internet/WiFi">Internet or WiFi problems</option>
+                            <option value="Smart Home/TV/Streaming">Smart home, TV, or streaming setup</option>
+                            <option value="Printer Setup/Issues">Printer setup or issues</option>
+                            <option value="Data Backup/Recovery">Data backup or recovery</option>
+                            <option value="Email/Account Setup">Email, passwords, or account setup</option>
+                            <option value="Computer Training/Tutoring">Phone, tablet, or computer training</option>
+                        </optgroup>
+                        <optgroup label="Business, Nonprofit & Church">
+                            <option value="Office Network/Computers">Office computers or network</option>
+                            <option value="Website/Domain/Online Presence">Website, domain, or Google Business</option>
+                            <option value="Security Cameras">Security cameras</option>
+                            <option value="Ongoing Tech Support">Ongoing tech support (someone on file)</option>
+                            <option value="Review a Quote">Second opinion on a tech quote</option>
+                        </optgroup>
+                        <optgroup label="Audio & Video">
+                            <option value="Sound System">Sound system setup or troubleshooting</option>
+                            <option value="Livestream/Projection">Livestreaming or projection</option>
+                            <option value="Event Audio">Event audio</option>
+                        </optgroup>
+                        <option value="Other">Something else</option>
                     </select>
                 </div>
 
@@ -261,10 +285,10 @@
 
         <div class="contact-form">
             <h2>Contact Toad Town Services</h2>
-            <p>The best way to reach us is by email. Typically with a response back within 24 hours.</p>
-            <p>If you would prefer to call, please leave a message and we will get back to you.</p>
+            <p>The best way to reach me is by email. I typically reply within 24 hours.</p>
+            <p>If you'd prefer to call, please leave a message and I'll get back to you.</p>
             <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
-            <p><strong>Serving:</strong> Rhinelander, WI and Oneida County</p>
+            <p><strong>Serving:</strong> Rhinelander and the Northwoods, with travel to the Wausau area</p>
 
             <div class="reveal-checkbox-container">
                 <label>
@@ -277,12 +301,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="contact-form review-box">
+            <h2>Worked With Me Before?</h2>
+            <p>If I've helped you out, I'd be grateful for a short Google review. Reviews help neighbors in the Northwoods find honest, local tech help, and they mean a lot to a small business like mine. A sentence or two is plenty.</p>
+            <p><a class="review-btn" href="https://g.page/r/Cfulcy6YYU_ZEAE/review" target="_blank" rel="noopener">Leave a Google review</a></p>
+        </div>
     </div>
 
     <script>
         // Obfuscated contact information (base64 encoded to prevent basic scraping)
         const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
         function toggleContact() {
             const checkbox = document.getElementById('revealContact');
@@ -293,8 +323,8 @@
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
-                document.getElementById('phoneDisplay').textContent = phone;
-                document.getElementById('emailDisplay').textContent = email;
+                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
 
                 details.classList.add('visible');
             } else {

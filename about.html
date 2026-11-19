@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Toad Town Services</title>
+    <meta name="description" content="Meet Nick, owner of Toad Town Services: a broadcast engineer and IT pro offering patient, local tech support in Rhinelander and northern Wisconsin.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -188,6 +190,14 @@
             margin-bottom: 4px;
         }
 
+        .photo {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            border: 2px solid #5cb85c;
+            display: block;
+            margin: 25px auto;
+        }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .about-content { padding: 20px; }
@@ -197,21 +207,20 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="why-toad.html">Why Toad?</a>
-        <a href="resources.html">Resources</a>
-        <a href="rates.html">Rates</a>
-        <a href="worklog/">Work Log</a>
-        <a href="https://video.toadtownservices.com" target="_blank">Videos</a>
-        <a href="contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/rates.html">Rates</a>
+        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
+        <a href="/contact.html">Contact</a>
     </nav>
 
     <div class="container">
         <div class="about-header">
             <h1>About Toad Town Services</h1>
 
-            <p><img class="logo"src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
+            <p><img class="logo"src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
 
             <p>Your Northern Wisconsin Partner for Technology Solutions</p>
         </div>
@@ -225,7 +234,6 @@
                         <li>Director of Operations & Technology, WXPR Public Radio</li>
                         <li>SBE Certified Radio Operator</li>
                         <li>4 years recording engineer, St. Olaf College</li>
-                        <li>Broadcast Engineering Certificate, Cleveland Institute of Electronics</li>
                     </ul>
                 </div>
                 <div>
@@ -256,7 +264,7 @@
 
         <div class="about-content">
             <h2>Who We Are</h2>
-            <p>Toad Town Services is a one-person technology services business serving Rhinelander and Oneida County, WI. I'm Nick, the owner and the person who shows up at your door.</p>
+            <p>Toad Town Services is a one-person technology services business serving Rhinelander and the Northwoods of Wisconsin. I'm Nick, the owner and the person who shows up at your door.</p>
 
             <h2>Background</h2>
             <p>My career has taken a lot of turns, and most of them involved figuring out how things work and fixing them when they don't.</p>
@@ -271,11 +279,19 @@
 
             <p>There's no shortage of tech support options, but most are either big-box impersonal or narrowly specialized. I started Toad Town Services because I kept running into people — neighbors, community members, small organizations — who needed someone who could actually sit down with them, understand their situation, and solve the problem in front of them rather than hand it off or upsell them.</p>
 
-            <p>I currently volunteer with my church's audio and streaming setup, WXPR's music library and am working through my own home renovation projects. That's not filler — it means I'm actively working on the same kinds of problems my clients bring to me.</p>
+            <p>I currently volunteer with my church's audio and streaming setup and build music library software for WXPR. That's not filler — it means I'm actively working on the same kinds of problems my clients bring to me.</p>
 
             <h2>What to Expect</h2>
 
             <p>Clear communication about what I'm doing and what it will cost. No unnecessary upsells. If I don't know or can't help with something, I'll tell you that too.</p>
+            <h2 id="why-toad">Why &ldquo;Toad&rdquo;?</h2>
+            <p>The first time I met my wife Julie, we were at a birthday party at a lake cabin, and a few of us went out to see what amphibians were singing in a nearby ditch. Later that year at college, I came across a small American toad on my way to visit the same group of friends, so I picked it up and presented it to Julie. Apparently a toad made a stronger impression than a bunch of flowers would have.</p>
+            <p>Years later, we bought a school bus to convert into an RV. When it came time to paint it, we chose green, and the bus became the <em>Toad</em>.</p>
+            <img src="/images/why-toad-bus.jpg" alt="Nick standing in front of Toad, the green school bus, at our Rhinelander property" class="photo" loading="lazy">
+            <p>Our property in Rhinelander had something the bus didn't: real toads. They're cute (to us) and great for pest control, so we gave them some good habitat in the garden. A whole town of toads.</p>
+            <p>When it came time to name the business, it wasn't much of a debate. Toad Town Services is a continuation of the same thread: something personal, a little unexpected, and easy to remember.</p>
+            <img src="/images/toad_front.jpg" alt="An American toad" class="photo" loading="lazy">
+
 
         </div>
 
@@ -300,7 +316,7 @@
     <script>
         // Obfuscated contact information (base64 encoded to prevent basic scraping)
         const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
         function toggleContact() {
             const checkbox = document.getElementById('revealContact');
@@ -311,8 +327,8 @@
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
-                document.getElementById('phoneDisplay').textContent = phone;
-                document.getElementById('emailDisplay').textContent = email;
+                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
 
                 details.classList.add('visible');
             } else {

@@ -6,7 +6,9 @@ permalink: /index.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toad Town Services - IT Support & Audio Engineering in Oneida County, WI</title>
+    <title>Toad Town Services - Tech Support & Audio/Video in Rhinelander and Northern Wisconsin</title>
+    <meta name="description" content="Toad Town Services: friendly, local tech support for homes, small businesses, nonprofits, and churches in Rhinelander and northern Wisconsin. Computers, WiFi, audio and livestreaming.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -138,6 +140,28 @@ permalink: /index.html
             color: #5cb85c;
             margin-top: 0;
         }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .featured-card {
+            border-left: 4px solid #5cb85c;
+            background-color: rgba(43, 31, 26, 0.5);
+            padding: 12px 15px;
+            border-radius: 5px;
+        }
+        .featured-card h3 {
+            color: #5cb85c;
+            font-size: 17px;
+            margin: 0 0 8px;
+        }
+        .featured-card p {
+            font-size: 14px;
+            margin: 0;
+        }
         .recent-work img {
             max-width: 100%;
             max-height: 350px;
@@ -167,29 +191,30 @@ permalink: /index.html
 
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="why-toad.html">Why Toad?</a>
-        <a href="resources.html">Resources</a>
-        <a href="rates.html">Rates</a>
-        <a href="worklog/">Work Log</a>
-        <a href="https://video.toadtownservices.com" target="_blank">Videos</a>
-        <a href="contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/rates.html">Rates</a>
+        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
+        <a href="/contact.html">Contact</a>
     </nav>
 
     <div class="container">
     <div class="page-header">
-        <h1><img class="logo" src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"> Toad Town Services</h1>
-        <p><strong>Serving Oneida County, Wisconsin</strong><br>
-        Technology Support For Home & Business</p>
+        <h1><img class="logo" src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"> Toad Town Services</h1>
+        <p><strong>Serving Rhinelander & the Northwoods of Wisconsin</strong><br>
+        Technology Support for Homes, Businesses, Nonprofits & Churches</p>
     </div>
 
     <div class="services">
         <div class="service-box">
             <h2>💻 Computer & Phone Support</h2>
             <ul>
-                <li>Computer & tablet setup</li>
+                <li>New computer setup & data transfer</li>
                 <li>Internet & WiFi troubleshooting</li>
+                <li>Switching internet, phone, or TV providers</li>
+                <li>Landline replacement (Frontier copper retirement)</li>
                 <li>Smartphone & tablet training</li>
                 <li>Video calling setup (Zoom, FaceTime, etc.)</li>
                 <li>Email setup & password recovery</li>
@@ -213,45 +238,48 @@ permalink: /index.html
                 <li>Security camera setup & troubleshooting</li>
                 <li>Employee technology training</li>
                 <li>Remote work setup assistance</li>
+                <li>Ongoing tech support, no contract required</li>
+                <li>Second opinion on IT, phone & copier contracts</li>
             </ul>
         </div>
 
         <div class="service-box">
-            <h2>🎵 Audio Engineering Services</h2>
+            <h2>🎵 Church & Event Audio/Video</h2>
             <ul>
                 <li>Church sound system setup & optimization</li>
                 <li>Live sound mixing for services & events</li>
                 <li>Microphone placement & configuration</li>
                 <li>Audio equipment troubleshooting</li>
-                <li>Recording setup for streaming services</li>
+                <li>Livestream setup & troubleshooting</li>
+                <li>Projection & presentation software (ProPresenter, etc.)</li>
                 <li>Acoustic treatment consultation</li>
                 <li>Speaker placement & calibration</li>
                 <li>Audio mixing board training</li>
                 <li>Event audio production</li>
+                <li>Assistive listening systems</li>
                 <li>Podcast & recording studio assistance</li>
             </ul>
         </div>
     </div>
 
-    <p style="text-align: center;"><a href="rates.html" style="color: #5cb85c; font-weight: bold;">See our rates &rarr;</a></p>
+    <p style="text-align: center;"><a href="/rates.html" style="color: #5cb85c; font-weight: bold;">See our rates &rarr;</a></p>
 
-    {% set latest = worklog.entries | last %}
-    {% if latest %}
     <div class="recent-work">
-        <h2>Recent Work</h2>
-        <a href="{{ latest.image }}" target="_blank">
-            <img src="{{ latest.image }}" alt="{{ latest.caption }}">
-        </a>
-        <p class="date">{{ latest.date }}</p>
-        <p>{{ latest.caption }}</p>
-        <p><a href="worklog/">See more of our work &rarr;</a></p>
-        <p style="font-size: 13px; color: #c4a882; margin-top: 15px;"><em>Note: Our work log includes personal renovation projects. We are not currently accepting handyman or general labor jobs &mdash; only tech, IT, and audio services at this time.</em></p>
+        <h2>Recent Projects</h2>
+        <div class="featured-grid">
+        {% for project in projects.projects %}{% if project.featured %}
+            <div class="featured-card">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.need }}</p>
+            </div>
+        {% endif %}{% endfor %}
+        </div>
+        <p><a href="/projects/">See what I did and how it turned out &rarr;</a></p>
     </div>
-    {% endif %}
 
     <div class="contact-info">
-        <h2>Contact Us Today</h2>
-        <p>Email us anytime or call during business hours for a free estimate!</p>
+        <h2>Get in Touch</h2>
+        <p>Email me anytime or call during business hours for a free estimate!</p>
         <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
 
         <div class="reveal-checkbox-container">
@@ -269,7 +297,7 @@ permalink: /index.html
     <script>
         // Obfuscated contact information (base64 encoded to prevent basic scraping)
         const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
         function toggleContact() {
             const checkbox = document.getElementById('revealContact2');
@@ -280,8 +308,8 @@ permalink: /index.html
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
-                document.getElementById('phoneDisplay2').textContent = phone;
-                document.getElementById('emailDisplay2').textContent = email;
+                document.getElementById('phoneDisplay2').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay2').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
 
                 details.classList.add('visible');
             } else {

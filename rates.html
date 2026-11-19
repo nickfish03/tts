@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rates - Toad Town Services</title>
+    <meta name="description" content="Clear, up-front hourly rates for tech, IT, and audio/video work from Toad Town Services in Rhinelander, WI.">
+    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -175,21 +177,20 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="why-toad.html">Why Toad?</a>
-        <a href="resources.html">Resources</a>
-        <a href="rates.html">Rates</a>
-        <a href="worklog/">Work Log</a>
-        <a href="https://video.toadtownservices.com" target="_blank">Videos</a>
-        <a href="contact.html">Contact</a>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/rates.html">Rates</a>
+        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
+        <a href="/contact.html">Contact</a>
     </nav>
 
     <div class="container">
         <div class="rates-header">
             <h1>Rates</h1>
 
-            <p><img class="logo"src="images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
+            <p><img class="logo"src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
 
             <p>Clear, up-front pricing for tech, IT, and audio work</p>
         </div>
@@ -215,6 +216,7 @@
             </table>
 
             <p>Rates are for tech, IT, and audio work. Rates may vary depending on project scope, complexity, or access &mdash; you'll always know the estimate before work begins.</p>
+            <p>I bill hourly only for time spent working. Visits outside the Rhinelander area may include a flat trip charge, which I'll quote up front.</p>
 
             <p>Right now I'm focusing on straightforward jobs and not taking on attic, crawlspace, or other hard-access work &mdash; if you're not sure whether your project qualifies, just ask.</p>
 
@@ -242,7 +244,7 @@
     <script>
         // Obfuscated contact information (base64 encoded to prevent basic scraping)
         const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'Y29udGFjdEB0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
 
         function toggleContact() {
             const checkbox = document.getElementById('revealContact');
@@ -252,8 +254,8 @@
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
 
-                document.getElementById('phoneDisplay').textContent = phone;
-                document.getElementById('emailDisplay').textContent = email;
+                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
 
                 details.classList.add('visible');
             } else {

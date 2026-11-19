@@ -1,13 +1,15 @@
 module.exports = function(eleventyConfig) {
   // Copy existing HTML files as-is to _site
 eleventyConfig.addPassthroughCopy("about.html");
-  eleventyConfig.addPassthroughCopy("why-toad.html");
+  eleventyConfig.addPassthroughCopy("why-toad.html"); // redirect to about.html#why-toad
   eleventyConfig.addPassthroughCopy("contact.html");
   eleventyConfig.addPassthroughCopy("resources.html");
   eleventyConfig.addPassthroughCopy("rates.html");
 
-  // Copy images directory for worklog photos
-  eleventyConfig.addPassthroughCopy("images");
+  // Copy images directory (logos, project photos)
+  eleventyConfig.addPassthroughCopy("images/logo");
+  eleventyConfig.addPassthroughCopy("images/projects");
+  eleventyConfig.addPassthroughCopy("images/*.jpg");
 
   return {
     dir: {
