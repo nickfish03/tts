@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Toad Town Services</title>
-    <meta name="description" content="Good, better, and even-better recommendations for password managers, browsers, email, backup, and home networking from Toad Town Services.">
-    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
+---
+title: "Resources - Toad Town Services"
+description: "Good, better, and even-better recommendations for password managers, browsers, email, backup, and home networking from Toad Town Services."
+permalink: /resources.html
+---
+{% extends "base.njk" %}
+{% from "contact-box.njk" import contactBox %}
+
+{% block styles %}
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
-            color: #faf3e8;
-            min-height: 100vh;
-        }
-
-        nav {
-            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        nav a {
-            color: #faf3e8;
-            text-decoration: none;
-            margin: 0 30px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-            color: #5cb85c;
-        }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .resources-header {
             text-align: center;
             background-color: rgba(73, 53, 41, 0.6);
@@ -51,17 +22,14 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-
         h1 {
             color: #5cb85c;
             margin-bottom: 15px;
         }
-
         .subtitle {
             font-size: 18px;
             color: #f0e5d8;
         }
-
         .intro-section {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
@@ -71,7 +39,6 @@
             backdrop-filter: blur(10px);
             line-height: 1.8;
         }
-
         .category {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
@@ -80,32 +47,27 @@
             margin-bottom: 25px;
             backdrop-filter: blur(10px);
         }
-
         .category h2 {
             color: #5cb85c;
             border-bottom: 2px solid #5cb85c;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-
         .tier {
             margin-bottom: 25px;
             padding-left: 15px;
             border-left: 3px solid #5cb85c;
         }
-
         .tier h3 {
             color: #5cb85c;
             margin-bottom: 10px;
             font-size: 20px;
         }
-
         .tier p {
             color: #f0e5d8;
             line-height: 1.8;
             margin: 0;
         }
-
         .category ul {
             color: #f0e5d8;
             line-height: 1.6;
@@ -125,9 +87,6 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-        .contact-info h2 {
-            color: #5cb85c;
-        }
         .phone {
             font-size: 24px;
             font-weight: bold;
@@ -142,29 +101,11 @@
             border-radius: 5px;
             display: inline-block;
         }
-        .reveal-checkbox-container label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            color: #faf3e8;
-        }
-        .reveal-checkbox-container input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            accent-color: #5cb85c;
-        }
         .contact-details {
             display: none;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 2px solid #5cb85c;
-        }
-        .contact-details.visible {
-            display: block;
         }
         .note-section {
             background-color: rgba(90, 44, 44, 0.5);
@@ -174,17 +115,14 @@
             margin: 30px 0;
             line-height: 1.8;
         }
-
         .note-section h2 {
             color: #5cb85c;
             margin-top: 0;
         }
-
         .note-section p {
             color: #f0e5d8;
             margin-bottom: 15px;
         }
-
         .cta-section {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
@@ -193,13 +131,11 @@
             text-align: center;
             backdrop-filter: blur(10px);
         }
-
         .cta-section p {
             color: #f0e5d8;
             font-size: 18px;
             line-height: 1.8;
         }
-
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .category { padding: 20px; }
@@ -215,23 +151,10 @@
             border-radius: 5px;
             font-size: 18px;
         }
-        .cta-btn:hover { background: #6fd36f; color: #2b1f1a !important; }
-        .reveal-small { margin-top: 20px; color: #f0e5d8; }
-        .reveal-small label { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-        .reveal-small input[type="checkbox"] { width: 18px; height: 18px; accent-color: #5cb85c; cursor: pointer; }
     </style>
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/rates.html">Rates</a>
-        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
-        <a href="/contact.html">Contact</a>
-    </nav>
+{% endblock %}
 
+{% block content %}
     <div class="container">
         <div class="resources-header">
             <h1>Resources & Recommendations</h1>
@@ -468,49 +391,6 @@
             <p>The "even better" options often prioritize privacy and control, which sometimes means trading some convenience. The best choice is the one you'll actually use consistently. Start with "good," upgrade to "better" when you're ready, and move to "even better" if privacy and control matter for your specific needs.</p>
         </div>
 
-        <div class="contact-info">
-            <h2>Need Help Choosing or Setting Up?</h2>
-            <p>That's exactly what I'm here for. I can walk you through options, help with setup, and make sure everything works together smoothly.</p>
-            <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
-
-            <p><a class="cta-btn" href="/contact.html">Send me a message &rarr;</a></p>
-            <div class="reveal-small">
-                <label>
-                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
-                    Prefer to call or email? Show my contact info
-                </label>
-                <div class="contact-details" id="contactDetails">
-                    <div class="phone" id="phoneDisplay"></div>
-                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
-                </div>
-            </div>
-        </div>
+        {{ contactBox("Need Help Choosing or Setting Up?", "That's exactly what I'm here for. I can walk you through options, help with setup, and make sure everything works together smoothly.") }}
     </div>
-
-    <script>
-        // Obfuscated contact information (base64 encoded to prevent basic scraping)
-        const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
-
-        function toggleContact() {
-            const checkbox = document.getElementById('revealContact');
-            const details = document.getElementById('contactDetails');
-
-            if (checkbox.checked) {
-                const phone = atob(encodedPhone);
-                const email = atob(encodedEmail);
-
-                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
-                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
-
-                details.classList.add('visible');
-            } else {
-                details.classList.remove('visible');
-            }
-        }
-    </script>
-    <footer style="background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%); color: #faf3e8; text-align: center; padding: 15px 0; margin-top: 40px; font-size: 14px;">
-        &copy; 2026 Toad Town Services LLC
-    </footer>
-</body>
-</html>
+{% endblock %}

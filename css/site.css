@@ -1,0 +1,59 @@
+/* Shared styles for every page. Page-specific styles live in each page template's styles block. */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
+    color: #faf3e8;
+    min-height: 100vh;
+}
+.contact-info h2 {
+    color: #5cb85c;
+}
+.reveal-checkbox-container label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #faf3e8;
+}
+.reveal-checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #5cb85c;
+}
+.contact-details.visible {
+    display: block;
+}
+nav {
+    background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+nav a {
+    color: #faf3e8;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #5cb85c;
+}
+.cta-btn:hover { background: #6fd36f; color: #2b1f1a !important; }
+.reveal-small { margin-top: 20px; color: #f0e5d8; }
+.reveal-small label { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.reveal-small input[type="checkbox"] { width: 18px; height: 18px; accent-color: #5cb85c; cursor: pointer; }
+footer {
+    background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
+    color: #faf3e8;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}

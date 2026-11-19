@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Toad Town Services</title>
-    <meta name="description" content="Contact Toad Town Services for tech support, IT, and church audio/video help in Rhinelander and northern Wisconsin.">
-    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
+---
+title: "Contact - Toad Town Services"
+description: "Contact Toad Town Services for tech support, IT, and church audio/video help in Rhinelander and northern Wisconsin."
+permalink: /contact.html
+---
+{% extends "base.njk" %}
+{% from "contact-box.njk" import contactBox %}
+
+{% block styles %}
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
-            color: #faf3e8;
-            min-height: 100vh;
-        }
-
-        nav {
-            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        nav a {
-            color: #faf3e8;
-            text-decoration: none;
-            margin: 0 30px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-            color: #5cb85c;
-        }
-
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .contact-header {
             text-align: center;
             background-color: rgba(73, 53, 41, 0.6);
@@ -51,12 +22,10 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-
         h1 {
             color: #5cb85c;
             margin-bottom: 10px;
         }
-
         .contact-form {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 40px;
@@ -65,18 +34,15 @@
             margin-bottom: 30px;
             backdrop-filter: blur(10px);
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
             color: #5cb85c;
         }
-
         .form-group input,
         .form-group textarea,
         .form-group select {
@@ -89,7 +55,6 @@
             background-color: rgba(43, 31, 26, 0.6);
             color: #faf3e8;
         }
-
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
@@ -97,12 +62,10 @@
             outline: none;
             background-color: rgba(43, 31, 26, 0.8);
         }
-
         .form-group textarea {
             height: 120px;
             resize: vertical;
         }
-
         .review-btn {
             display: inline-block;
             background-color: #5cb85c;
@@ -125,11 +88,9 @@
             width: 100%;
             font-weight: bold;
         }
-
         .submit-btn:hover {
             background: linear-gradient(135deg, #5cb85c 0%, #6dc76d 100%);
         }
-
         .contact-info {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
@@ -138,18 +99,12 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-
-        .contact-info h2 {
-            color: #5cb85c;
-        }
-
         .phone {
             font-size: 24px;
             font-weight: bold;
             color: #5cb85c;
             margin-bottom: 15px;
         }
-
         .reveal-checkbox-container {
             background-color: rgba(90, 44, 44, 0.5);
             border: 2px solid #5cb85c;
@@ -158,52 +113,20 @@
             border-radius: 5px;
             display: inline-block;
         }
-
-        .reveal-checkbox-container label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            color: #faf3e8;
-        }
-
-        .reveal-checkbox-container input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            accent-color: #5cb85c;
-        }
-
         .contact-details {
             display: none;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 2px solid #5cb85c;
         }
-
-        .contact-details.visible {
-            display: block;
-        }
-
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .contact-form { padding: 20px; }
         }
     </style>
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/rates.html">Rates</a>
-        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
-        <a href="/contact.html">Contact</a>
-    </nav>
+{% endblock %}
 
+{% block content %}
     <div class="container">
         <div class="contact-header">
             <h1>Contact Toad Town Services</h1>
@@ -308,32 +231,4 @@
             <p><a class="review-btn" href="https://g.page/r/Cfulcy6YYU_ZEAE/review" target="_blank" rel="noopener">Leave a Google review</a></p>
         </div>
     </div>
-
-    <script>
-        // Obfuscated contact information (base64 encoded to prevent basic scraping)
-        const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
-
-        function toggleContact() {
-            const checkbox = document.getElementById('revealContact');
-            const details = document.getElementById('contactDetails');
-
-            if (checkbox.checked) {
-                // Decode and display contact information
-                const phone = atob(encodedPhone);
-                const email = atob(encodedEmail);
-
-                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
-                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
-
-                details.classList.add('visible');
-            } else {
-                details.classList.remove('visible');
-            }
-        }
-    </script>
-    <footer style="background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%); color: #faf3e8; text-align: center; padding: 15px 0; margin-top: 40px; font-size: 14px;">
-        &copy; 2026 Toad Town Services LLC
-    </footer>
-</body>
-</html>
+{% endblock %}

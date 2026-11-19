@@ -1,47 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rates - Toad Town Services</title>
-    <meta name="description" content="Clear, up-front hourly rates for tech, IT, and audio/video work from Toad Town Services in Rhinelander, WI.">
-    <link rel="icon" type="image/svg+xml" href="/images/logo/tts-logo-only-green.svg">
+---
+title: "Rates - Toad Town Services"
+description: "Clear, up-front hourly rates for tech, IT, and audio/video work from Toad Town Services in Rhinelander, WI."
+permalink: /rates.html
+---
+{% extends "base.njk" %}
+{% from "contact-box.njk" import contactBox %}
+
+{% block styles %}
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2b1f1a 0%, #3d2517 50%, #2b1f1a 100%);
-            color: #faf3e8;
-            min-height: 100vh;
-        }
-
-        nav {
-            background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        nav a {
-            color: #faf3e8;
-            text-decoration: none;
-            margin: 0 30px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-            color: #5cb85c;
-        }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-
         .rates-header {
             text-align: center;
             background-color: rgba(73, 53, 41, 0.6);
@@ -51,12 +22,10 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-
         h1 {
             color: #5cb85c;
             margin-bottom: 20px;
         }
-
         .rates-content {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 40px;
@@ -65,47 +34,39 @@
             line-height: 1.8;
             backdrop-filter: blur(10px);
         }
-
         .rate-table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0 25px 0;
         }
-
         .rate-table th, .rate-table td {
             text-align: left;
             padding: 12px 10px;
             border-bottom: 1px solid rgba(92, 184, 92, 0.4);
         }
-
         .rate-table th {
             color: #5cb85c;
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
         .rate-table td {
             color: #f0e5d8;
         }
-
         .rate-table .rate-amount {
             font-weight: bold;
             color: #5cb85c;
             font-size: 18px;
         }
-
         .rates-content p {
             margin-bottom: 20px;
             color: #f0e5d8;
         }
-
         .rates-note {
             font-size: 13px;
             color: #c4a882;
             margin-top: 15px;
         }
-
         .contact-info {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
@@ -115,18 +76,12 @@
             border: 1px solid #5cb85c;
             backdrop-filter: blur(10px);
         }
-
-        .contact-info h2 {
-            color: #5cb85c;
-        }
-
         .phone {
             font-size: 24px;
             font-weight: bold;
             color: #5cb85c;
             margin-bottom: 15px;
         }
-
         .reveal-checkbox-container {
             background-color: rgba(90, 44, 44, 0.5);
             border: 2px solid #5cb85c;
@@ -135,40 +90,16 @@
             border-radius: 5px;
             display: inline-block;
         }
-
-        .reveal-checkbox-container label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            color: #faf3e8;
-        }
-
-        .reveal-checkbox-container input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            accent-color: #5cb85c;
-        }
-
         .contact-details {
             display: none;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 2px solid #5cb85c;
         }
-
-        .contact-details.visible {
-            display: block;
-        }
-
         .logo {
             width: 100px;
             height: auto;
         }
-
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 16px; }
             .rates-content { padding: 20px; }
@@ -183,23 +114,10 @@
             border-radius: 5px;
             font-size: 18px;
         }
-        .cta-btn:hover { background: #6fd36f; color: #2b1f1a !important; }
-        .reveal-small { margin-top: 20px; color: #f0e5d8; }
-        .reveal-small label { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-        .reveal-small input[type="checkbox"] { width: 18px; height: 18px; accent-color: #5cb85c; cursor: pointer; }
     </style>
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/projects/">Projects</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/rates.html">Rates</a>
-        <a href="https://video.toadtownservices.com" target="_blank" rel="noopener">Videos</a>
-        <a href="/contact.html">Contact</a>
-    </nav>
+{% endblock %}
 
+{% block content %}
     <div class="container">
         <div class="rates-header">
             <h1>Rates</h1>
@@ -237,49 +155,6 @@
             <p class="rates-note"><em>Rates effective September 2026 and subject to change.</em></p>
         </div>
 
-        <div class="contact-info">
-            <h2>Ready to Discuss Your Project?</h2>
-            <p>Reach out anytime for a free consultation. We'll talk through what you need and figure out the best path forward together.</p>
-            <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
-
-            <p><a class="cta-btn" href="/contact.html">Send me a message &rarr;</a></p>
-            <div class="reveal-small">
-                <label>
-                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
-                    Prefer to call or email? Show my contact info
-                </label>
-                <div class="contact-details" id="contactDetails">
-                    <div class="phone" id="phoneDisplay"></div>
-                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
-                </div>
-            </div>
-        </div>
+        {{ contactBox("Ready to Discuss Your Project?", "Reach out anytime for a free consultation. We'll talk through what you need and figure out the best path forward together.") }}
     </div>
-
-    <script>
-        // Obfuscated contact information (base64 encoded to prevent basic scraping)
-        const encodedPhone = 'NzE1LTU3NS0xODQ0';
-        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
-
-        function toggleContact() {
-            const checkbox = document.getElementById('revealContact');
-            const details = document.getElementById('contactDetails');
-
-            if (checkbox.checked) {
-                const phone = atob(encodedPhone);
-                const email = atob(encodedEmail);
-
-                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
-                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
-
-                details.classList.add('visible');
-            } else {
-                details.classList.remove('visible');
-            }
-        }
-    </script>
-    <footer style="background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%); color: #faf3e8; text-align: center; padding: 15px 0; margin-top: 40px; font-size: 14px;">
-        &copy; 2026 Toad Town Services LLC
-    </footer>
-</body>
-</html>
+{% endblock %}
