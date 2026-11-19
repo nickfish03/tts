@@ -5,6 +5,7 @@ permalink: /about.html
 ---
 {% extends "base.njk" %}
 {% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
 
 {% block styles %}
     <style>
@@ -12,19 +13,6 @@ permalink: /about.html
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-        }
-        .about-header {
-            text-align: center;
-            background-color: rgba(73, 53, 41, 0.6);
-            padding: 20px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #6cc86c;
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            color: #6cc86c;
-            margin-bottom: 20px;
         }
         .about-content {
             background-color: rgba(73, 53, 41, 0.6);
@@ -79,10 +67,6 @@ permalink: /about.html
             margin-top: 15px;
             padding-top: 15px;
             border-top: 2px solid #6cc86c;
-        }
-        .logo {
-            width: 100px;
-            height: auto;
         }
         .tldr-box {
             background-color: rgba(73, 53, 41, 0.6);
@@ -146,13 +130,7 @@ permalink: /about.html
 
 {% block content %}
     <div class="container">
-        <div class="about-header">
-            <h1>About Toad Town Services</h1>
-
-            <p><img class="logo"src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
-
-            <p>Your Northern Wisconsin Partner for Technology Solutions</p>
-        </div>
+        {{ pageHeader("About Toad Town Services", "Your Northern Wisconsin Partner for Technology Solutions") }}
 
         <div class="tldr-box">
             <h2>Qualifications at a Glance</h2>

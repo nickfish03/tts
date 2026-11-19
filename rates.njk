@@ -5,6 +5,7 @@ permalink: /rates.html
 ---
 {% extends "base.njk" %}
 {% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
 
 {% block styles %}
     <style>
@@ -12,19 +13,6 @@ permalink: /rates.html
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-        }
-        .rates-header {
-            text-align: center;
-            background-color: rgba(73, 53, 41, 0.6);
-            padding: 20px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #6cc86c;
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            color: #6cc86c;
-            margin-bottom: 20px;
         }
         .rates-content {
             background-color: rgba(73, 53, 41, 0.6);
@@ -96,10 +84,6 @@ permalink: /rates.html
             padding-top: 15px;
             border-top: 2px solid #6cc86c;
         }
-        .logo {
-            width: 100px;
-            height: auto;
-        }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 1rem; }
             .rates-content { padding: 20px; }
@@ -119,13 +103,7 @@ permalink: /rates.html
 
 {% block content %}
     <div class="container">
-        <div class="rates-header">
-            <h1>Rates</h1>
-
-            <p><img class="logo"src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services Logo"></p>
-
-            <p>Clear, up-front pricing for tech, IT, and audio work</p>
-        </div>
+        {{ pageHeader("Rates", "Clear, up-front pricing for tech, IT, and audio work") }}
 
         <div class="rates-content">
             <table class="rate-table">

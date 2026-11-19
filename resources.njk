@@ -5,6 +5,7 @@ permalink: /resources.html
 ---
 {% extends "base.njk" %}
 {% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
 
 {% block styles %}
     <style>
@@ -12,23 +13,6 @@ permalink: /resources.html
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-        }
-        .resources-header {
-            text-align: center;
-            background-color: rgba(73, 53, 41, 0.6);
-            padding: 20px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #6cc86c;
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            color: #6cc86c;
-            margin-bottom: 15px;
-        }
-        .subtitle {
-            font-size: 1.125rem;
-            color: #f0e5d8;
         }
         .intro-section {
             background-color: rgba(73, 53, 41, 0.6);
@@ -161,10 +145,7 @@ permalink: /resources.html
 
 {% block content %}
     <div class="container">
-        <div class="resources-header">
-            <h1>Resources & Recommendations</h1>
-            <p class="subtitle">Technology Recommendations for Northern Wisconsin Homes</p>
-        </div>
+        {{ pageHeader("Resources & Recommendations", "Technology Recommendations for Northern Wisconsin Homes") }}
 
         <div class="intro-section">
             <p>These are tools and services I actually use, recommend to clients, and believe offer real value. I've organized them by category in a "good, better, even better" format—because the best solution depends on your needs, budget, and how much control you want over your data.</p>

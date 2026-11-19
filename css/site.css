@@ -75,3 +75,45 @@ h1, h2, h3 {
     overflow-wrap: break-word;
     hyphens: auto;
 }
+
+/* Page banner (see _includes/page-header.njk) */
+.page-header {
+    text-align: center;
+    background-color: rgba(73, 53, 41, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #6cc86c;
+    backdrop-filter: blur(10px);
+}
+.page-header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0.3em 0 0;
+    padding-bottom: 12px;
+    color: #6cc86c;
+    border-bottom: 3px solid #6cc86c;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+.page-header h1 span { text-align: left; min-width: 0; }
+.page-header .logo {
+    width: 75px;
+    height: auto;
+    flex-shrink: 0;
+}
+.page-header p {
+    color: #f0e5d8;
+    font-size: 1.125rem;
+    margin-bottom: 0.4em;
+}
+@media (max-width: 600px) {
+    .page-header h1 { font-size: 1.6rem; gap: 12px; }
+    .page-header .logo { width: 56px; }
+}
+@media (max-width: 359px) {
+    .page-header h1 { flex-direction: column; gap: 6px; }
+    .page-header h1 span { text-align: center; min-width: 0; }
+}

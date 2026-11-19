@@ -5,6 +5,7 @@ permalink: /contact.html
 ---
 {% extends "base.njk" %}
 {% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
 
 {% block styles %}
     <style>
@@ -12,19 +13,6 @@ permalink: /contact.html
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-        }
-        .contact-header {
-            text-align: center;
-            background-color: rgba(73, 53, 41, 0.6);
-            padding: 20px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            border: 1px solid #6cc86c;
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            color: #6cc86c;
-            margin-bottom: 10px;
         }
         .contact-form {
             background-color: rgba(73, 53, 41, 0.6);
@@ -128,10 +116,7 @@ permalink: /contact.html
 
 {% block content %}
     <div class="container">
-        <div class="contact-header">
-            <h1>Contact Toad Town Services</h1>
-            <p>Let me know how I can help!</p>
-        </div>
+        {{ pageHeader("Contact Toad Town Services", "Let me know how I can help!") }}
 
         <div class="contact-form">
             <form action="https://formspree.io/f/xykkgakv" method="POST">

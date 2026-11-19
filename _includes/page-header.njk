@@ -1,0 +1,8 @@
+{# Page banner: toad logo on the left, title beside it, subtitle below.
+   Usage: {% from "page-header.njk" import pageHeader %}{{ pageHeader("Title", "Subtitle (HTML ok)") }} #}
+{% macro pageHeader(title, subtitle) %}
+        <div class="page-header">
+            <h1><img class="logo" src="/images/logo/tts-logo-only-green.svg" alt="Toad Town Services logo"><span>{{ title | safe }}</span></h1>
+            {% if subtitle %}<p>{{ subtitle | safe }}</p>{% endif %}
+        </div>
+{% endmacro %}
