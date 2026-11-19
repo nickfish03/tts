@@ -116,6 +116,56 @@
             font-size: 14px;
             margin-top: -10px;
         }
+        .contact-info {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #5cb85c;
+            backdrop-filter: blur(10px);
+        }
+        .contact-info h2 {
+            color: #5cb85c;
+        }
+        .phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5cb85c;
+            margin-bottom: 15px;
+        }
+        .reveal-checkbox-container {
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #5cb85c;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .reveal-checkbox-container label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: #faf3e8;
+        }
+        .reveal-checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #5cb85c;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #5cb85c;
+        }
+        .contact-details.visible {
+            display: block;
+        }
         .note-section {
             background-color: rgba(90, 44, 44, 0.5);
             border: 2px solid #5cb85c;
@@ -404,10 +454,46 @@
             <p>The "even better" options often prioritize privacy and control, which sometimes means trading some convenience. The best choice is the one you'll actually use consistently. Start with "good," upgrade to "better" when you're ready, and move to "even better" if privacy and control matter for your specific needs.</p>
         </div>
 
-        <div class="cta-section">
-            <p><strong>Need help choosing or setting up any of these?</strong> That's exactly what I'm here for. I can walk you through options, help with setup, and make sure everything works together smoothly.</p>
+        <div class="contact-info">
+            <h2>Need Help Choosing or Setting Up?</h2>
+            <p>That's exactly what I'm here for. I can walk you through options, help with setup, and make sure everything works together smoothly.</p>
+            <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
+
+            <div class="reveal-checkbox-container">
+                <label>
+                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                    <span>Check here to reveal contact information</span>
+                </label>
+                <div class="contact-details" id="contactDetails">
+                    <div class="phone" id="phoneDisplay"></div>
+                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Obfuscated contact information (base64 encoded to prevent basic scraping)
+        const encodedPhone = 'NzE1LTU3NS0xODQ0';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+
+        function toggleContact() {
+            const checkbox = document.getElementById('revealContact');
+            const details = document.getElementById('contactDetails');
+
+            if (checkbox.checked) {
+                const phone = atob(encodedPhone);
+                const email = atob(encodedEmail);
+
+                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
+
+                details.classList.add('visible');
+            } else {
+                details.classList.remove('visible');
+            }
+        }
+    </script>
     <footer style="background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%); color: #faf3e8; text-align: center; padding: 15px 0; margin-top: 40px; font-size: 14px;">
         &copy; 2026 Toad Town Services LLC
     </footer>
