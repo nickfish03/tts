@@ -15,8 +15,8 @@ permalink: /index.html
         }
         h1 {
             text-align: center;
-            color: #5cb85c;
-            border-bottom: 3px solid #5cb85c;
+            color: #6cc86c;
+            border-bottom: 3px solid #6cc86c;
             padding-bottom: 10px;
         }
         p {
@@ -28,13 +28,13 @@ permalink: /index.html
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             backdrop-filter: blur(10px);
         }
         .phone {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #5cb85c;
+            color: #6cc86c;
         }
         .services {
             margin: 30px 0;
@@ -42,14 +42,14 @@ permalink: /index.html
         .service-box {
             padding: 20px;
             background-color: rgba(73, 53, 41, 0.6);
-            border-left: 4px solid #5cb85c;
+            border-left: 4px solid #6cc86c;
             border-radius: 5px;
             margin-bottom: 20px;
             backdrop-filter: blur(10px);
         }
         .service-box h2 {
             margin-top: 0;
-            color: #5cb85c;
+            color: #6cc86c;
         }
         .service-box ul {
             columns: 2;
@@ -58,7 +58,7 @@ permalink: /index.html
         }
         .reveal-checkbox-container {
             background-color: rgba(90, 44, 44, 0.5);
-            border: 2px solid #5cb85c;
+            border: 2px solid #6cc86c;
             padding: 15px;
             margin: 15px 0;
             border-radius: 5px;
@@ -68,7 +68,7 @@ permalink: /index.html
             display: none;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 2px solid #5cb85c;
+            border-top: 2px solid #6cc86c;
         }
         .page-header {
             text-align: center;
@@ -76,7 +76,7 @@ permalink: /index.html
             padding: 20px 20px;
             border-radius: 10px;
             margin-bottom: 30px;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             backdrop-filter: blur(10px);
         }
         .recent-work {
@@ -85,11 +85,11 @@ permalink: /index.html
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             backdrop-filter: blur(10px);
         }
         .recent-work h2 {
-            color: #5cb85c;
+            color: #6cc86c;
             margin-top: 0;
         }
         .featured-grid {
@@ -100,18 +100,18 @@ permalink: /index.html
             margin-bottom: 10px;
         }
         .featured-card {
-            border-left: 4px solid #5cb85c;
+            border-left: 4px solid #6cc86c;
             background-color: rgba(43, 31, 26, 0.5);
             padding: 12px 15px;
             border-radius: 5px;
         }
         .featured-card h3 {
-            color: #5cb85c;
-            font-size: 17px;
+            color: #6cc86c;
+            font-size: 1.0625rem;
             margin: 0 0 8px;
         }
         .featured-card p {
-            font-size: 14px;
+            font-size: 0.9375rem;
             margin: 0;
         }
         .recent-work img {
@@ -122,11 +122,11 @@ permalink: /index.html
             margin-bottom: 10px;
         }
         .recent-work .date {
-            color: #5cb85c;
-            font-size: 14px;
+            color: #6cc86c;
+            font-size: 0.9375rem;
         }
         .recent-work a {
-            color: #5cb85c;
+            color: #6cc86c;
             font-weight: bold;
         }
         .logo {
@@ -134,18 +134,18 @@ permalink: /index.html
             height: auto;
         }
         @media (max-width: 600px) {
-            nav a { margin: 0 15px; font-size: 16px; }
+            nav a { margin: 0 15px; font-size: 1rem; }
             .service-box ul { columns: 1; }
         }
         .cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #4a9d4a 0%, #5cb85c 100%);
-            color: #faf3e8 !important;
+            background: linear-gradient(135deg, #5cb85c 0%, #6cc86c 100%);
+            color: #2b1f1a !important;
             text-decoration: none;
             font-weight: bold;
             padding: 14px 32px;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     </style>
 {% endblock %}
@@ -160,7 +160,7 @@ permalink: /index.html
 
     <div class="services">
         <div class="service-box">
-            <h2>💻 Computer & Phone Support</h2>
+            <h2><span aria-hidden="true">💻</span> Computer & Phone Support</h2>
             <ul>
                 <li>New computer setup & data transfer</li>
                 <li>Internet & WiFi troubleshooting</li>
@@ -178,7 +178,7 @@ permalink: /index.html
         </div>
 
         <div class="service-box">
-            <h2>🏢 Small Business Support</h2>
+            <h2><span aria-hidden="true">🏢</span> Small Business Support</h2>
             <ul>
                 <li>Office computer & network setup</li>
                 <li>Point of sale (POS) system setup</li>
@@ -195,7 +195,7 @@ permalink: /index.html
         </div>
 
         <div class="service-box">
-            <h2>🎵 Church & Event Audio/Video</h2>
+            <h2><span aria-hidden="true">🎵</span> Church & Event Audio/Video</h2>
             <ul>
                 <li>Church sound system setup & optimization</li>
                 <li>Live sound mixing for services & events</li>
@@ -213,7 +213,7 @@ permalink: /index.html
         </div>
     </div>
 
-    <p style="text-align: center;"><a href="/rates.html" style="color: #5cb85c; font-weight: bold;">See our rates &rarr;</a></p>
+    <p style="text-align: center;"><a href="/rates.html" style="color: #6cc86c; font-weight: bold;">See our rates &rarr;</a></p>
 
     <div class="recent-work">
         <h2>Recent Projects</h2>

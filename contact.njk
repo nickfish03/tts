@@ -19,18 +19,18 @@ permalink: /contact.html
             padding: 20px 20px;
             border-radius: 10px;
             margin-bottom: 30px;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             backdrop-filter: blur(10px);
         }
         h1 {
-            color: #5cb85c;
+            color: #6cc86c;
             margin-bottom: 10px;
         }
         .contact-form {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 40px;
             border-radius: 10px;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             margin-bottom: 30px;
             backdrop-filter: blur(10px);
         }
@@ -41,16 +41,16 @@ permalink: /contact.html
             display: block;
             margin-bottom: 8px;
             font-weight: bold;
-            color: #5cb85c;
+            color: #6cc86c;
         }
         .form-group input,
         .form-group textarea,
         .form-group select {
             width: 100%;
             padding: 12px;
-            border: 2px solid #5cb85c;
+            border: 2px solid #6cc86c;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 1rem;
             box-sizing: border-box;
             background-color: rgba(43, 31, 26, 0.6);
             color: #faf3e8;
@@ -58,17 +58,17 @@ permalink: /contact.html
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            border-color: #5cb85c;
-            outline: none;
+            border-color: #6cc86c;
             background-color: rgba(43, 31, 26, 0.8);
         }
+        .form-group input::placeholder { color: #c9bcae; opacity: 1; }
         .form-group textarea {
             height: 120px;
             resize: vertical;
         }
         .review-btn {
             display: inline-block;
-            background-color: #5cb85c;
+            background-color: #6cc86c;
             color: #2b1f1a;
             font-weight: bold;
             text-decoration: none;
@@ -78,36 +78,36 @@ permalink: /contact.html
         .review-btn:hover { background-color: #6fd36f; }
         .review-box { text-align: center; }
         .submit-btn {
-            background: linear-gradient(135deg, #4a9d4a 0%, #5cb85c 100%);
-            color: #faf3e8;
+            background: linear-gradient(135deg, #5cb85c 0%, #6cc86c 100%);
+            color: #2b1f1a;
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 1.125rem;
             cursor: pointer;
             width: 100%;
             font-weight: bold;
         }
         .submit-btn:hover {
-            background: linear-gradient(135deg, #5cb85c 0%, #6dc76d 100%);
+            background: linear-gradient(135deg, #6cc86c 0%, #6dc76d 100%);
         }
         .contact-info {
             background-color: rgba(73, 53, 41, 0.6);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            border: 1px solid #5cb85c;
+            border: 1px solid #6cc86c;
             backdrop-filter: blur(10px);
         }
         .phone {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #5cb85c;
+            color: #6cc86c;
             margin-bottom: 15px;
         }
         .reveal-checkbox-container {
             background-color: rgba(90, 44, 44, 0.5);
-            border: 2px solid #5cb85c;
+            border: 2px solid #6cc86c;
             padding: 15px;
             margin: 15px auto;
             border-radius: 5px;
@@ -117,10 +117,10 @@ permalink: /contact.html
             display: none;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 2px solid #5cb85c;
+            border-top: 2px solid #6cc86c;
         }
         @media (max-width: 600px) {
-            nav a { margin: 0 15px; font-size: 16px; }
+            nav a { margin: 0 15px; font-size: 1rem; }
             .contact-form { padding: 20px; }
         }
     </style>
@@ -136,28 +136,28 @@ permalink: /contact.html
         <div class="contact-form">
             <form action="https://formspree.io/f/xykkgakv" method="POST">
                 <div class="form-group">
-                    <label>Your name:</label>
-                    <input type="text" name="name" required>
+                    <label for="f-name">Your name:</label>
+                    <input id="f-name" type="text" name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Your email:</label>
-                    <input type="email" name="email" required>
+                    <label for="f-email">Your email:</label>
+                    <input id="f-email" type="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Your phone (optional):</label>
-                    <input type="tel" name="phone">
+                    <label for="f-phone">Your phone (optional):</label>
+                    <input id="f-phone" type="tel" name="phone">
                 </div>
 
                 <div class="form-group">
-                    <label>Your location:</label>
-                    <input type="text" name="location" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
+                    <label for="f-location">Your location:</label>
+                    <input id="f-location" type="text" name="location" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Type of service needed:</label>
-                    <select name="service-type" required>
+                    <label for="f-service-type">Type of service needed:</label>
+                    <select id="f-service-type" name="service-type" required>
                         <option value="">-- Please select --</option>
                         <optgroup label="Home">
                             <option value="Computer Repair/Troubleshooting">Computer repair or troubleshooting</option>
@@ -186,8 +186,8 @@ permalink: /contact.html
                 </div>
 
                 <div class="form-group">
-                    <label>Timeline/urgency:</label>
-                    <select name="timeline" required>
+                    <label for="f-timeline">Timeline/urgency:</label>
+                    <select id="f-timeline" name="timeline" required>
                         <option value="">-- Please select --</option>
                         <option value="ASAP - Emergency">ASAP - Emergency</option>
                         <option value="This week">This week</option>
@@ -198,8 +198,8 @@ permalink: /contact.html
                 </div>
 
                 <div class="form-group">
-                    <label>Please describe your project or issue:</label>
-                    <textarea name="message" rows="6" required></textarea>
+                    <label for="f-message">Please describe your project or issue:</label>
+                    <textarea id="f-message" name="message" rows="6" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>

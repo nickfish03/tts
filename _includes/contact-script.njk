@@ -12,7 +12,7 @@
                 const phone = atob(encodedPhone);
                 const email = atob(encodedEmail);
                 document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
-                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #5cb85c;">' + email + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #6cc86c;">' + email + '</a>';
                 details.classList.add('visible');
             } else {
                 details.classList.remove('visible');

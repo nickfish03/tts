@@ -8,14 +8,14 @@ body {
     min-height: 100vh;
 }
 .contact-info h2 {
-    color: #5cb85c;
+    color: #6cc86c;
 }
 .reveal-checkbox-container label {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: #faf3e8;
 }
@@ -23,7 +23,7 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: #5cb85c;
+    accent-color: #6cc86c;
 }
 .contact-details.visible {
     display: block;
@@ -38,22 +38,40 @@ nav a {
     color: #faf3e8;
     text-decoration: none;
     margin: 0 30px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
 }
 nav a:hover {
     text-decoration: underline;
-    color: #5cb85c;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    color: #faf3e8;
 }
 .cta-btn:hover { background: #6fd36f; color: #2b1f1a !important; }
 .reveal-small { margin-top: 20px; color: #f0e5d8; }
 .reveal-small label { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-.reveal-small input[type="checkbox"] { width: 18px; height: 18px; accent-color: #5cb85c; cursor: pointer; }
+.reveal-small input[type="checkbox"] { width: 18px; height: 18px; accent-color: #6cc86c; cursor: pointer; }
 footer {
     background: linear-gradient(90deg, #5a2c2c 0%, #7a3838 50%, #5a2c2c 100%);
     color: #faf3e8;
     text-align: center;
     padding: 15px 0;
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 0.9375rem;
+}
+
+/* Accessibility: clearly visible keyboard focus on the dark background */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #faf3e8;
+    outline-offset: 3px;
+}
+
+/* Let long words in headings wrap instead of scrolling sideways at high zoom */
+h1, h2, h3 {
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
