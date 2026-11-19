@@ -1,0 +1,21 @@
+{# Standard contact box: button to the contact form, plus a smaller reveal for phone/email.
+   Usage: {% from "contact-box.njk" import contactBox %}{{ contactBox("Heading", "Intro sentence.") }} #}
+{% macro contactBox(heading, intro) %}
+        <div class="contact-info">
+            <h2>{{ heading | safe }}</h2>
+            <p>{{ intro | safe }}</p>
+            <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
+
+            <p><a class="cta-btn" href="/contact.html">Send me a message &rarr;</a></p>
+            <div class="reveal-small">
+                <label>
+                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                    Prefer to call or email? Show my contact info
+                </label>
+                <div class="contact-details" id="contactDetails">
+                    <div class="phone" id="phoneDisplay"></div>
+                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+                </div>
+            </div>
+        </div>
+{% endmacro %}

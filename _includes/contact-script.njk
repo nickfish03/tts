@@ -1,0 +1,21 @@
+    <script>
+        // Obfuscated contact information (base64 encoded to prevent basic scraping).
+        // Change the phone or email here and it updates on every page.
+        const encodedPhone = 'NzE1LTU3NS0xODQ0';
+        const encodedEmail = 'bmlja0B0b2FkdG93bnNlcnZpY2VzLmNvbQ==';
+
+        function toggleContact() {
+            const checkbox = document.getElementById('revealContact');
+            const details = document.getElementById('contactDetails');
+            if (!checkbox || !details) return;
+            if (checkbox.checked) {
+                const phone = atob(encodedPhone);
+                const email = atob(encodedEmail);
+                document.getElementById('phoneDisplay').innerHTML = '<a href="tel:' + phone.replace(/-/g, '') + '" style="color: inherit;">' + phone + '</a>';
+                document.getElementById('emailDisplay').innerHTML = '<a href="mailto:' + email + '" style="color: #6cc86c;">' + email + '</a>';
+                details.classList.add('visible');
+            } else {
+                details.classList.remove('visible');
+            }
+        }
+    </script>

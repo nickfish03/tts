@@ -1,0 +1,138 @@
+---
+title: "Rates - Toad Town Services"
+description: "Clear, up-front hourly rates for tech, IT, and audio/video work from Toad Town Services in Rhinelander, WI."
+permalink: /rates.html
+---
+{% extends "base.njk" %}
+{% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
+
+{% block styles %}
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .rates-content {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #6cc86c;
+            line-height: 1.8;
+            backdrop-filter: blur(10px);
+        }
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 25px 0;
+        }
+        .rate-table th, .rate-table td {
+            text-align: left;
+            padding: 12px 10px;
+            border-bottom: 1px solid rgba(108, 200, 108, 0.4);
+        }
+        .rate-table th {
+            color: #6cc86c;
+            font-size: 0.9375rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rate-table td {
+            color: #f0e5d8;
+        }
+        .rate-table .rate-amount {
+            font-weight: bold;
+            color: #6cc86c;
+            font-size: 1.125rem;
+        }
+        .rates-content p {
+            margin-bottom: 20px;
+            color: #f0e5d8;
+        }
+        .rates-note {
+            font-size: 0.9375rem;
+            color: #d9c4a5;
+            margin-top: 15px;
+        }
+        .contact-info {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #6cc86c;
+            backdrop-filter: blur(10px);
+        }
+        .phone {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6cc86c;
+            margin-bottom: 15px;
+        }
+        .reveal-checkbox-container {
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #6cc86c;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #6cc86c;
+        }
+        @media (max-width: 600px) {
+            nav a { margin: 0 15px; font-size: 1rem; }
+            .rates-content { padding: 20px; }
+        }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #5cb85c 0%, #6cc86c 100%);
+            color: #2b1f1a !important;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 32px;
+            border-radius: 5px;
+            font-size: 1.125rem;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ pageHeader("Rates", "Clear, up-front pricing for tech, IT, and audio work") }}
+
+        <div class="rates-content">
+            <table class="rate-table">
+                <tr>
+                    <th>Client Type</th>
+                    <th>Rate</th>
+                </tr>
+                <tr>
+                    <td>Business</td>
+                    <td class="rate-amount">$100/hr</td>
+                </tr>
+                <tr>
+                    <td>Nonprofit & Churches</td>
+                    <td class="rate-amount">$80/hr</td>
+                </tr>
+                <tr>
+                    <td>Residential</td>
+                    <td class="rate-amount">$60/hr</td>
+                </tr>
+            </table>
+
+            <p>Rates are for tech, IT, and audio work. Rates may vary depending on project scope, complexity, or access &mdash; you'll always know the estimate before work begins.</p>
+            <p>I bill hourly only for time spent working. Visits outside the Rhinelander area may include a flat trip charge, which I'll quote up front.</p>
+
+            <p>Right now I'm focusing on straightforward jobs and not taking on attic, crawlspace, or other hard-access work &mdash; if you're not sure whether your project qualifies, just ask.</p>
+
+            <p class="rates-note"><em>Rates effective September 2026 and subject to change.</em></p>
+        </div>
+
+        {{ contactBox("Ready to Discuss Your Project?", "Reach out anytime for a free consultation. We'll talk through what you need and figure out the best path forward together.") }}
+    </div>
+{% endblock %}

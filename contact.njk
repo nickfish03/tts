@@ -1,0 +1,219 @@
+---
+title: "Contact - Toad Town Services"
+description: "Contact Toad Town Services for tech support, IT, and church audio/video help in Rhinelander and northern Wisconsin."
+permalink: /contact.html
+---
+{% extends "base.njk" %}
+{% from "contact-box.njk" import contactBox %}
+{% from "page-header.njk" import pageHeader %}
+
+{% block styles %}
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .contact-form {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #6cc86c;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #6cc86c;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #6cc86c;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background-color: rgba(43, 31, 26, 0.6);
+            color: #faf3e8;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #6cc86c;
+            background-color: rgba(43, 31, 26, 0.8);
+        }
+        .form-group input::placeholder { color: #c9bcae; opacity: 1; }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .review-btn {
+            display: inline-block;
+            background-color: #6cc86c;
+            color: #2b1f1a;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+        }
+        .review-btn:hover { background-color: #6fd36f; }
+        .review-box { text-align: center; }
+        .submit-btn {
+            background: linear-gradient(135deg, #5cb85c 0%, #6cc86c 100%);
+            color: #2b1f1a;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.125rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #6cc86c 0%, #6dc76d 100%);
+        }
+        .contact-info {
+            background-color: rgba(73, 53, 41, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #6cc86c;
+            backdrop-filter: blur(10px);
+        }
+        .phone {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6cc86c;
+            margin-bottom: 15px;
+        }
+        .reveal-checkbox-container {
+            background-color: rgba(90, 44, 44, 0.5);
+            border: 2px solid #6cc86c;
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .contact-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #6cc86c;
+        }
+        @media (max-width: 600px) {
+            nav a { margin: 0 15px; font-size: 1rem; }
+            .contact-form { padding: 20px; }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ pageHeader("Contact Toad Town Services", "Let me know how I can help!") }}
+
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xykkgakv" method="POST">
+                <div class="form-group">
+                    <label for="f-name">Your name:</label>
+                    <input id="f-name" type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="f-email">Your email:</label>
+                    <input id="f-email" type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="f-phone">Your phone (optional):</label>
+                    <input id="f-phone" type="tel" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="f-location">Your location:</label>
+                    <input id="f-location" type="text" name="location" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="f-service-type">Type of service needed:</label>
+                    <select id="f-service-type" name="service-type" required>
+                        <option value="">-- Please select --</option>
+                        <optgroup label="Home">
+                            <option value="Computer Repair/Troubleshooting">Computer repair or troubleshooting</option>
+                            <option value="Virus/Malware Removal">Virus or malware removal</option>
+                            <option value="Internet/WiFi">Internet or WiFi problems</option>
+                            <option value="Smart Home/TV/Streaming">Smart home, TV, or streaming setup</option>
+                            <option value="Printer Setup/Issues">Printer setup or issues</option>
+                            <option value="Data Backup/Recovery">Data backup or recovery</option>
+                            <option value="Email/Account Setup">Email, passwords, or account setup</option>
+                            <option value="Computer Training/Tutoring">Phone, tablet, or computer training</option>
+                        </optgroup>
+                        <optgroup label="Business, Nonprofit & Church">
+                            <option value="Office Network/Computers">Office computers or network</option>
+                            <option value="Website/Domain/Online Presence">Website, domain, or Google Business</option>
+                            <option value="Security Cameras">Security cameras</option>
+                            <option value="Ongoing Tech Support">Ongoing tech support (someone on file)</option>
+                            <option value="Review a Quote">Second opinion on a tech quote</option>
+                        </optgroup>
+                        <optgroup label="Audio & Video">
+                            <option value="Sound System">Sound system setup or troubleshooting</option>
+                            <option value="Livestream/Projection">Livestreaming or projection</option>
+                            <option value="Event Audio">Event audio</option>
+                        </optgroup>
+                        <option value="Other">Something else</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="f-timeline">Timeline/urgency:</label>
+                    <select id="f-timeline" name="timeline" required>
+                        <option value="">-- Please select --</option>
+                        <option value="ASAP - Emergency">ASAP - Emergency</option>
+                        <option value="This week">This week</option>
+                        <option value="Within 2 weeks">Within 2 weeks</option>
+                        <option value="Within a month">Within a month</option>
+                        <option value="No rush - flexible timeline">No rush - flexible timeline</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="f-message">Please describe your project or issue:</label>
+                    <textarea id="f-message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Toad Town Services</h2>
+            <p>The best way to reach me is by email. I typically reply within 24 hours.</p>
+            <p>If you'd prefer to call, please leave a message and I'll get back to you.</p>
+            <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 4:00 PM</p>
+            <p><strong>Serving:</strong> Rhinelander and the Northwoods, with travel to the Wausau area</p>
+
+            <div class="reveal-checkbox-container">
+                <label>
+                    <input type="checkbox" id="revealContact" onchange="toggleContact()">
+                    <span>Check here to reveal contact information</span>
+                </label>
+                <div class="contact-details" id="contactDetails">
+                    <div class="phone" id="phoneDisplay"></div>
+                    <p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form review-box">
+            <h2>Worked With Me Before?</h2>
+            <p>If I've helped you out, I'd be grateful for a short Google review. Reviews help neighbors in the Northwoods find honest, local tech help, and they mean a lot to a small business like mine. A sentence or two is plenty.</p>
+            <p><a class="review-btn" href="https://g.page/r/Cfulcy6YYU_ZEAE/review" target="_blank" rel="noopener">Leave a Google review</a></p>
+        </div>
+    </div>
+{% endblock %}

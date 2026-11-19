@@ -1,0 +1,56 @@
+{
+  "projects": [
+    {
+      "title": "Church Streaming & Projection Tune-Up",
+      "category": "Audio & Video",
+      "featured": true,
+      "need": "A Wausau-area church couldn't get its new laptop to project with ProPresenter, and the pastor's wireless headset kept cutting out during the sermon.",
+      "did": "Traced the problem to how the display chain was being connected, cleaned up ProPresenter's screen settings, calibrated the projector, and locked it to the one input they use. Moved the headset receiver up front and fed it back to the mixer over an existing cable run.",
+      "result": "Projection works from the new laptop, the headset stays connected, and the church has a written equipment list, a ProPresenter checklist for volunteers, and a step-by-step upgrade plan."
+    },
+    {
+      "title": "Rural Internet Consultation",
+      "category": "Home",
+      "featured": true,
+      "need": "A homeowner fed up with her internet and phone provider asked whether switching to Starlink would solve her problems.",
+      "did": "Did an on-site survey and ran a satellite obstruction check. Even with the leaves off, tall pines all around meant about a minute of dropouts every hour, so Starlink would have been a poor fit.",
+      "result": "She skipped an expensive equipment purchase that wouldn't have worked well, kept her existing internet, and dropped a landline she no longer needed."
+    },
+    {
+      "title": "Website & Email Migration",
+      "category": "Business & Nonprofit",
+      "featured": true,
+      "need": "A Northwoods economic development nonprofit's website and email were run by an outside vendor whose contract was ending.",
+      "did": "Moved their email to Google Workspace, migrated the mailbox, cleaned out years of leftover DNS records, and connected a new Wix website to their domain.",
+      "result": "The organization now owns and controls its own domain, email, and website, with nothing tied to a former vendor."
+    },
+    {
+      "title": "Church Sound & Livestream",
+      "category": "Audio & Video",
+      "featured": false,
+      "need": "My home church in Rhinelander needed its sound system kept in good shape and its Sunday livestream easy for volunteers to run.",
+      "did": "As a volunteer, I documented the existing equipment, installed a new audio processor, and recorded short how-to videos for the digital mixer.",
+      "result": "Volunteers have videos they can watch before running the board, so the system doesn't depend on one person's memory.",
+      "image": "/images/projects/church-audio-processor.jpg",
+      "imageAlt": "Church audio equipment rack being documented before a new audio processor is installed",
+      "link": "https://video.toadtownservices.com",
+      "linkText": "See the how-to videos"
+    },
+    {
+      "title": "Phone & Internet Provider Switch",
+      "category": "Home",
+      "need": "A longtime Frontier customer wanted to move her home phone, internet, and TV to Spectrum without losing the phones around her home.",
+      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home, including an intercom that runs through the phone line.",
+      "result": "Service switched over and her existing phone jacks kept working. Next up is replacing a few worn-out handsets."
+    },
+    {
+      "title": "Radio Station Music Library",
+      "category": "Business & Nonprofit",
+      "need": "WXPR Public Radio needed a better way to catalog and search its music library.",
+      "did": "Designed and built a custom music library and catalog application as a volunteer side project.",
+      "result": "Station staff and volunteers have a purpose-built tool for finding and managing music.",
+      "image": "/images/projects/radio-music-library.png",
+      "imageAlt": "Screenshot of the music library catalog application built for WXPR"
+    }
+  ]
+}

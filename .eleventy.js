@@ -1,13 +1,15 @@
 module.exports = function(eleventyConfig) {
-  // Copy existing HTML files as-is to _site
-eleventyConfig.addPassthroughCopy("about.html");
+  // Redirect page for the old "Why Toad?" URL (story now lives on About)
   eleventyConfig.addPassthroughCopy("why-toad.html");
-  eleventyConfig.addPassthroughCopy("contact.html");
-  eleventyConfig.addPassthroughCopy("resources.html");
-  eleventyConfig.addPassthroughCopy("rates.html");
 
-  // Copy images directory for worklog photos
-  eleventyConfig.addPassthroughCopy("images");
+  // Shared stylesheet and images
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("images/logo");
+  eleventyConfig.addPassthroughCopy("images/projects");
+  eleventyConfig.addPassthroughCopy("images/*.jpg");
+
+  // {% year %} for the footer copyright
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
     dir: {
@@ -16,7 +18,7 @@ eleventyConfig.addPassthroughCopy("about.html");
       includes: "_includes",
       data: "_data"
     },
-    // Process only .njk and .md files, not all .html files
+    // Pages are .njk templates that extend _includes/base.njk
     templateFormats: ["njk", "md"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
