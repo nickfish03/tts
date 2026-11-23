@@ -107,6 +107,47 @@ permalink: /contact.html
             padding-top: 15px;
             border-top: 2px solid #6cc86c;
         }
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .form-note {
+            font-size: 0.9375rem;
+            color: #f0e5d8;
+            margin: 0 0 20px;
+        }
+        .help-text {
+            font-size: 0.875rem;
+            color: #c9bcae;
+            margin: 6px 0 0;
+        }
+        .form-status {
+            margin-top: 15px;
+            padding: 12px 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .form-status.show { display: block; }
+        .form-status.error {
+            background-color: rgba(90, 44, 44, 0.7);
+            border: 2px solid #e8a0a0;
+        }
+        .form-status.success {
+            background-color: rgba(43, 31, 26, 0.6);
+            border: 2px solid #6cc86c;
+        }
+        .cf-turnstile { margin-bottom: 20px; }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+        .form-group input:invalid:not(:placeholder-shown):not(:focus),
+        .form-group textarea:invalid:not(:focus):not(:placeholder-shown) {
+            border-color: #e8a0a0;
+        }
         @media (max-width: 600px) {
             nav a { margin: 0 15px; font-size: 1rem; }
             .contact-form { padding: 20px; }
@@ -119,29 +160,37 @@ permalink: /contact.html
         {{ pageHeader("Contact Toad Town Services", "Let me know how I can help!") }}
 
         <div class="contact-form">
-            <form action="https://formspree.io/f/xykkgakv" method="POST">
+            <form id="contact-form" method="POST" data-endpoint="aHR0cHM6Ly9mb3Jtc3ByZWUuaW8vZi94eWtrZ2Frdg==">
+                <p class="form-note">Fields marked * are required. Please don't include passwords or account numbers in your message.</p>
+
+                <input type="hidden" name="_subject" id="f-subject" value="Website inquiry - Toad Town Services">
+                <input type="hidden" name="fill-time-seconds" id="f-fill-time" value="">
+                <div class="hp-field" aria-hidden="true">
+                    <label for="f-website">Leave this field empty</label>
+                    <input id="f-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="form-group">
-                    <label for="f-name">Your name:</label>
-                    <input id="f-name" type="text" name="name" required>
+                    <label for="f-name">Your name *</label>
+                    <input id="f-name" type="text" name="name" autocomplete="name" maxlength="100" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="f-email">Your email:</label>
-                    <input id="f-email" type="email" name="email" required>
+                    <label for="f-email">Your email *</label>
+                    <input id="f-email" type="email" name="email" autocomplete="email" maxlength="150" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="f-phone">Your phone (optional):</label>
-                    <input id="f-phone" type="tel" name="phone">
+                    <label for="f-phone">Your phone (optional)</label>
+                    <input id="f-phone" type="tel" name="phone" autocomplete="tel" maxlength="30">
                 </div>
 
                 <div class="form-group">
-                    <label for="f-location">Your location:</label>
-                    <input id="f-location" type="text" name="location" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
+                    <label for="f-location">Your location *</label>
+                    <input id="f-location" type="text" name="location" autocomplete="address-level2" maxlength="100" placeholder="Town or area (e.g., Rhinelander, Minocqua, Wausau)" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="f-service-type">Type of service needed:</label>
+                    <label for="f-service-type">Type of service needed *</label>
                     <select id="f-service-type" name="service-type" required>
                         <option value="">-- Please select --</option>
                         <optgroup label="Home">
@@ -171,7 +220,7 @@ permalink: /contact.html
                 </div>
 
                 <div class="form-group">
-                    <label for="f-timeline">Timeline/urgency:</label>
+                    <label for="f-timeline">Timeline/urgency *</label>
                     <select id="f-timeline" name="timeline" required>
                         <option value="">-- Please select --</option>
                         <option value="ASAP - Emergency">ASAP - Emergency</option>
@@ -183,11 +232,16 @@ permalink: /contact.html
                 </div>
 
                 <div class="form-group">
-                    <label for="f-message">Please describe your project or issue:</label>
-                    <textarea id="f-message" name="message" rows="6" required></textarea>
+                    <label for="f-message">Please describe your project or issue *</label>
+                    <textarea id="f-message" name="message" rows="6" minlength="20" maxlength="3000" placeholder="What's going on? Include the device or system involved, what you've already tried, and anything else that helps." required></textarea>
+                    <p class="help-text">A few sentences is plenty.</p>
                 </div>
 
-                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAGPJPoiMwWi9Vipr" data-theme="dark"></div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Send Message</button>
+                <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+                <noscript><p class="form-note">This form needs JavaScript. Please enable it to send a message.</p></noscript>
             </form>
         </div>
 
@@ -216,4 +270,66 @@ permalink: /contact.html
             <p><a class="review-btn" href="https://g.page/r/Cfulcy6YYU_ZEAE/review" target="_blank" rel="noopener">Leave a Google review</a></p>
         </div>
     </div>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        (function () {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            var status = document.getElementById('form-status');
+            var btn = document.getElementById('submit-btn');
+            var started = Date.now();
+            var MIN_SECONDS = 4; // faster than this is almost certainly a bot
+
+            function showStatus(kind, html) {
+                status.className = 'form-status show ' + kind;
+                status.innerHTML = html;
+                status.focus();
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var seconds = Math.round((Date.now() - started) / 1000);
+                document.getElementById('f-fill-time').value = String(seconds);
+
+                var service = document.getElementById('f-service-type').value;
+                document.getElementById('f-subject').value =
+                    'Website inquiry' + (service ? ': ' + service : '') + ' - Toad Town Services';
+
+                // Honeypot filled or form completed impossibly fast: pretend success, send nothing.
+                if (document.getElementById('f-website').value || seconds < MIN_SECONDS) {
+                    form.reset();
+                    showStatus('success', '<strong>Thanks!</strong> Your message was sent. I typically reply within 24 hours.');
+                    return;
+                }
+
+                // Cloudflare Turnstile adds this hidden field once its check passes.
+                var tsField = form.querySelector('[name="cf-turnstile-response"]');
+                if (!tsField || !tsField.value) {
+                    showStatus('error', 'Please wait a moment for the security check to finish, then press Send again.');
+                    return;
+                }
+
+                btn.disabled = true;
+                btn.textContent = 'Sending...';
+                status.className = 'form-status';
+
+                fetch(atob(form.dataset.endpoint), {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                }).then(function (res) {
+                    if (!res.ok) throw new Error('bad status ' + res.status);
+                    form.reset();
+                    showStatus('success', '<strong>Thanks!</strong> Your message was sent. I typically reply within 24 hours.');
+                }).catch(function () {
+                    showStatus('error', "Sorry, that didn't go through. Please try again, or use <strong>Check here to reveal contact information</strong> below to call or email me directly.");
+                }).then(function () {
+                    if (window.turnstile) window.turnstile.reset(); // tokens are single-use
+                    btn.disabled = false;
+                    btn.textContent = 'Send Message';
+                });
+            });
+        })();
+    </script>
 {% endblock %}
