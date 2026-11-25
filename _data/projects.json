@@ -9,6 +9,14 @@
       "result": "Projection works from the new laptop, the headset stays connected, and the church has a written equipment list, a ProPresenter checklist for volunteers, and a step-by-step upgrade plan."
     },
     {
+      "title": "Phone & Internet Provider Switch",
+      "category": "Home",
+      "featured": true,
+      "need": "A longtime Frontier customer wanted to move her home phone, internet, and TV to Spectrum without losing the phones around her home.",
+      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home, including a building door intercom that runs through the phone line. On a follow-up visit I set up new cordless phones with voicemail and rewired the Spectrum line so the door intercom rings her new phones.",
+      "result": "Service switched over, the worn-out handsets are replaced, and visitors at the door still ring through to phones she can carry around the home."
+    },
+    {
       "title": "Rural Internet Consultation",
       "category": "Home",
       "featured": true,
@@ -19,7 +27,7 @@
     {
       "title": "Website & Email Migration",
       "category": "Business & Nonprofit",
-      "featured": true,
+      "featured": false,
       "need": "A Northwoods economic development nonprofit's website and email were run by an outside vendor whose contract was ending.",
       "did": "Moved their email to Google Workspace, migrated the mailbox, cleaned out years of leftover DNS records, and connected a new Wix website to their domain.",
       "result": "The organization now owns and controls its own domain, email, and website, with nothing tied to a former vendor."
@@ -37,15 +45,9 @@
       "linkText": "See the how-to videos"
     },
     {
-      "title": "Phone & Internet Provider Switch",
-      "category": "Home",
-      "need": "A longtime Frontier customer wanted to move her home phone, internet, and TV to Spectrum without losing the phones around her home.",
-      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home, including a building door intercom that runs through the phone line. On a follow-up visit I set up new cordless phones with voicemail and rewired the Spectrum line so the door intercom rings her new phones.",
-      "result": "Service switched over, the worn-out handsets are replaced, and visitors at the door still ring through to phones she can carry around the home."
-    },
-    {
       "title": "Radio Station Music Library",
       "category": "Business & Nonprofit",
+      "featured": false,
       "need": "WXPR Public Radio needed a better way to catalog and search its music library.",
       "did": "Designed and built a custom music library and catalog application as a volunteer side project.",
       "result": "Station staff and volunteers have a purpose-built tool for finding and managing music.",
