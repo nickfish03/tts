@@ -9,6 +9,22 @@
       "result": "Projection works from the new laptop, the headset stays connected, and the church has a written equipment list, a ProPresenter checklist for volunteers, and a step-by-step upgrade plan."
     },
     {
+      "title": "Phone Provider Switch",
+      "category": "Home",
+      "featured": true,
+      "need": "A longtime Frontier customer wanted to move her home phone service to Spectrum without losing the phones around her home.",
+      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home. On a follow-up visit I set up new cordless phones with voicemail.",
+      "result": "Her phone service switched over, her existing phone jacks kept working, and the worn-out handsets were replaced with new ones."
+    },
+    {
+      "title": "Door Intercom Diagnosis & Rewire",
+      "category": "Home",
+      "featured": false,
+      "need": "After her landline moved to Spectrum, visitors at the building's front door could no longer ring her phones, and nothing about the building's door-entry system was documented.",
+      "did": "Worked out that the modem was feeding the apartment wiring on the wrong side of the building's door-entry controller. Traced the wiring from her apartment down to the basement, marked a spare pair, and connected the Spectrum line to the controller's line input through a dedicated modem jack. Confirmed the old Frontier line was dead before disconnecting it, then tested end to end and labeled everything at both ends.",
+      "result": "Door calls from the front entrance ring her phones again, and the wiring is labeled so the next person who opens it can follow it."
+    },
+    {
       "title": "Rural Internet Consultation",
       "category": "Home",
       "featured": true,
@@ -19,7 +35,7 @@
     {
       "title": "Website & Email Migration",
       "category": "Business & Nonprofit",
-      "featured": true,
+      "featured": false,
       "need": "A Northwoods economic development nonprofit's website and email were run by an outside vendor whose contract was ending.",
       "did": "Moved their email to Google Workspace, migrated the mailbox, cleaned out years of leftover DNS records, and connected a new Wix website to their domain.",
       "result": "The organization now owns and controls its own domain, email, and website, with nothing tied to a former vendor."
@@ -37,15 +53,9 @@
       "linkText": "See the how-to videos"
     },
     {
-      "title": "Phone & Internet Provider Switch",
-      "category": "Home",
-      "need": "A longtime Frontier customer wanted to move her home phone, internet, and TV to Spectrum without losing the phones around her home.",
-      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home, including an intercom that runs through the phone line.",
-      "result": "Service switched over and her existing phone jacks kept working. Next up is replacing a few worn-out handsets."
-    },
-    {
       "title": "Radio Station Music Library",
       "category": "Business & Nonprofit",
+      "featured": false,
       "need": "WXPR Public Radio needed a better way to catalog and search its music library.",
       "did": "Designed and built a custom music library and catalog application as a volunteer side project.",
       "result": "Station staff and volunteers have a purpose-built tool for finding and managing music.",
