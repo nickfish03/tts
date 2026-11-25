@@ -9,12 +9,20 @@
       "result": "Projection works from the new laptop, the headset stays connected, and the church has a written equipment list, a ProPresenter checklist for volunteers, and a step-by-step upgrade plan."
     },
     {
-      "title": "Phone & Internet Provider Switch",
+      "title": "Phone Provider Switch",
       "category": "Home",
       "featured": true,
-      "need": "A longtime Frontier customer wanted to move her home phone, internet, and TV to Spectrum without losing the phones around her home.",
-      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home, including a building door intercom that runs through the phone line. On a follow-up visit I set up new cordless phones with voicemail and rewired the Spectrum line so the door intercom rings her new phones.",
-      "result": "Service switched over, the worn-out handsets are replaced, and visitors at the door still ring through to phones she can carry around the home."
+      "need": "A longtime Frontier customer wanted to move her home phone service to Spectrum without losing the phones around her home.",
+      "did": "Made the calls to both providers with her, was there for the install, and mapped every phone in the home. On a follow-up visit I set up new cordless phones with voicemail.",
+      "result": "Her phone service switched over, her existing phone jacks kept working, and the worn-out handsets were replaced with new ones."
+    },
+    {
+      "title": "Door Intercom Rewire",
+      "category": "Home",
+      "featured": false,
+      "need": "A resident's apartment building door intercom rang through her phone line, and she needed it to keep working with new phones on a new provider.",
+      "did": "Worked out how the intercom was tied into the existing phone wiring, then rewired the Spectrum line so the intercom rings her new phones.",
+      "result": "Visitors at the door still ring through to phones she can carry around the home."
     },
     {
       "title": "Rural Internet Consultation",
