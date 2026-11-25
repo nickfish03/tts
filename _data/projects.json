@@ -17,12 +17,12 @@
       "result": "Her phone service switched over, her existing phone jacks kept working, and the worn-out handsets were replaced with new ones."
     },
     {
-      "title": "Door Intercom Rewire",
+      "title": "Door Intercom Diagnosis & Rewire",
       "category": "Home",
       "featured": false,
-      "need": "A resident's apartment building door intercom rang through her phone line, and she needed it to keep working with new phones on a new provider.",
-      "did": "Worked out how the intercom was tied into the existing phone wiring, then rewired the Spectrum line so the intercom rings her new phones.",
-      "result": "Visitors at the door still ring through to phones she can carry around the home."
+      "need": "After her landline moved to Spectrum, visitors at the building's front door could no longer ring her phones, and nothing about the building's door-entry system was documented.",
+      "did": "Worked out that the modem was feeding the apartment wiring on the wrong side of the building's door-entry controller. Traced the wiring from her apartment down to the basement, marked a spare pair, and connected the Spectrum line to the controller's line input through a dedicated modem jack. Confirmed the old Frontier line was dead before disconnecting it, then tested end to end and labeled everything at both ends.",
+      "result": "Door calls from the front entrance ring her phones again, and the wiring is labeled so the next person who opens it can follow it."
     },
     {
       "title": "Rural Internet Consultation",
